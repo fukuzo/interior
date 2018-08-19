@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>スタイル</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+<link rel="stylesheet" type="text/css" href="common/css/reset.css" media="all" />
+<link rel="stylesheet" type="text/css" href="common/css/layout.css">
+<link rel="stylesheet" type="text/css" href="common/css/class.css">
+<link rel="stylesheet" type="text/css" href="common/css/parts.css">
+<link rel="stylesheet" type="text/css" href="common/css/style.css">
+
+<link rel="stylesheet" type="text/css" href="common/css/print.css" media="print"><!--使わない時は削除-->
+
+<script type="text/javascript" src="common/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="common/js/common.js"></script>
+<style>
+#wrapper{padding-bottom:100px;}
+.posF{
+	background-color: #fff;
+	width:100%;
+	height: 100px;
+	top: 0;
+	left: 0;
+}
+#wrapper > .inner{padding-top: 100px;}
+h1{
+	margin:1.4em 0 0;
+	font-size: 24px;
+}
+h2{
+	margin:1em 0 0.2em;
+	font-size: 20px;
+	font-weight: bold;
+}
+.style{
+	width: 100%;
+	font-size: 14px;
+}
+.style .column1{background-color: #eee;}
+.style th,
+.style td{
+	padding: 5px 10px;
+	border:1px dotted #ccc;
+}
+.style th{}
+.style td{}
+.style thead th{
+	font-weight: bold;
+	text-align:center;
+}
+.style thead .col1{width: 30%;}
+.style thead .col2{width: 37%;}
+.style tbody th{
+	width: 30%;
+	font-size: 16px;
+}
+.style tbody th + td{width: 37%;}
+</style>
+</head>
+
+<body id="">
+<div id="wrapper">
+<div class="posF">
+	<div class="inner">
+		<h1>スタイルガイド</h1>
+		<table class="style"><col span="1" class="column1"><col span="1" class="column2">
+			<thead><tr><th class="col1">クラス名</th><th class="col2">見栄え</th><th class="col3">説明</th></tr></thead>
+		</table>
+	</div>
+</div>
+
+<div class="inner">
+	<h2>テキスト色</h2>
+	<table class="style"><col span="1" class="column1"><col span="1" class="column2">
+		<tbody>
+			<tr>
+				<th>txRed1</th>
+				<td>
+					<p class="txRed1">txRed1</p>
+				</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>背景色</h2>
+	<table class="style"><col span="1" class="column1"><col span="1" class="column2">
+		<tbody>
+			<tr>
+				<th>bgGrey1</th>
+				<td>
+					<div class="bgGrey1">bgGrey1</div>
+				</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>ボーダー</h2>
+	<table class="style"><col span="1" class="column1"><col span="1" class="column2">
+		<tbody>
+			<tr>
+				<th>bdRed1</th>
+				<td>
+					<div class="bdRed1">bdRed1</div>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>bdcRed1</th>
+				<td>
+					<div class="bdcRed1">bdcRed1</div>
+				</td>
+				<td>border-color:#F84644;</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>ライン</h2>
+	<table class="style"><col span="1" class="column1"><col span="1" class="column2">
+		<tbody>
+			<tr>
+				<th>line bgGrey1</th>
+				<td>
+					<hr class="line bgGrey1">
+				</td>
+				<td>背景色と共に使用</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>タイトル</h2>
+	<table class="style"><col span="1" class="column1"><col span="1" class="column2">
+		<tbody>
+			<tr>
+				<th>ttl1</th>
+				<td>
+					<p class="ttl1">ttl1</p>
+				</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>ボタン</h2>
+	<table class="style"><col span="1" class="column1"><col span="1" class="column2">
+		<tbody>
+			<tr>
+				<th>btn1</th>
+				<td>
+					<span class="btn1">btn1</span>
+				</td>
+				<td>hoverで<br />
+				text-decoration:none;<br />
+				opacity:0.8;
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>グループ</h2>
+	<table class="style"><col span="1" class="column1"><col span="1" class="column2">
+		<tbody>
+			<tr>
+				<th>クラス</th>
+				<td>
+					表示
+				</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+</div><!--/.inner-->
+</div><!--/#wrapper-->
+</body>
+</html>
