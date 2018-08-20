@@ -1179,6 +1179,16 @@ blockquote:before {
     @media screen and (max-width: 767px) {
       .u-ttl1 {
         font-size: 20px; } }
+  .u-ttl2 {
+    margin-bottom: 1em;
+    padding-bottom: 0.2em;
+    color: #136a64;
+    font-size: 30px;
+    border-bottom: 2px solid #136a64; }
+    @media screen and (max-width: 767px) {
+      .u-ttl2 {
+        margin-bottom: 0.6em;
+        font-size: 20px; } }
   .u-link1 {
     color: #666;
     text-decoration: underline; }
@@ -1324,6 +1334,20 @@ blockquote:before {
               font-size: 12px; } }
   .u-txt1 {
     font-size: 14px; }
+  .u-txtList1 > ul {
+    display: flex;
+    flex-wrap: wrap; }
+    .u-txtList1 > ul > li {
+      width: 50%;
+      padding: 0 1em 1em 0; }
+  @media screen and (max-width: 767px) {
+    .u-txtList1 {
+      font-size: 16px; }
+      .u-txtList1 > ul {
+        display: block; }
+        .u-txtList1 > ul > li {
+          width: auto;
+          padding: 0 0 0.5em; } }
   .u-thumList1 {
     padding-bottom: 5px; }
     .u-thumList1 > ul {
@@ -1413,15 +1437,8 @@ blockquote:before {
         .u-thumTxtList2 > ul > li .colR {
           width: auto;
           float: none; } }
-    .u-thumTxtList2 > ul > li .ttl {
-      margin-bottom: 0.4em;
-      padding-bottom: 0.2em;
-      color: #136a64;
-      font-size: 30px;
-      border-bottom: 2px solid #136a64; }
-      @media screen and (max-width: 767px) {
-        .u-thumTxtList2 > ul > li .ttl {
-          font-size: 20px; } }
+    .u-thumTxtList2 > ul > li .u-ttl2 {
+      margin-bottom: 0.4em; }
     @media screen and (max-width: 767px) {
       .u-thumTxtList2 > ul > li .tags {
         padding-bottom: 15px; } }
@@ -1551,6 +1568,55 @@ blockquote:before {
         .u-tbl1 td {
           display: block;
           padding: 0; } }
+  .u-imgBox1 {
+    text-align: center; }
+    .u-imgBox1 img {
+      max-width: 100%;
+      height: auto; }
+  @media screen and (max-width: 767px) {
+    .u-txtBox1 {
+      font-size: 16px; } }
+  .u-imgTxtBox1 > .in {
+    display: flex;
+    justify-content: space-between; }
+    @media screen and (max-width: 767px) {
+      .u-imgTxtBox1 > .in {
+        display: block; } }
+  .u-imgTxtBox1 .txts {
+    width: 48%;
+    line-height: 2; }
+    @media screen and (max-width: 767px) {
+      .u-imgTxtBox1 .txts {
+        width: auto;
+        font-size: 16px;
+        line-height: 1.8; } }
+    .u-imgTxtBox1 .txts p + p {
+      margin-top: 1em; }
+    .u-imgTxtBox1 .txts .sign {
+      margin-top: 2em;
+      line-height: 1.4; }
+      @media screen and (max-width: 767px) {
+        .u-imgTxtBox1 .txts .sign {
+          margin-top: 1em; } }
+      .u-imgTxtBox1 .txts .sign small {
+        display: block;
+        font-size: 0.8em; }
+      .u-imgTxtBox1 .txts .sign strong {
+        display: block;
+        margin-top: 0.2em;
+        font-family: "Yu Mincho";
+        font-size: 1.6em;
+        font-weight: bold; }
+  .u-imgTxtBox1 .img {
+    flex-shrink: 0;
+    width: 47.7321814255%; }
+    .u-imgTxtBox1 .img img {
+      max-width: 100%;
+      height: auto; }
+    @media screen and (max-width: 767px) {
+      .u-imgTxtBox1 .img {
+        width: auto;
+        margin-top: 5vw; } }
   .u-pager1 {
     display: flex;
     justify-content: center;
