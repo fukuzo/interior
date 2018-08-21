@@ -241,7 +241,18 @@
 			flex-wrap: wrap;
 			> li{
 				width: 50%;
-				padding: 0 1em 1em 0;
+				padding: 0 1em 1em 1.2em;
+				position: relative;
+				&:before{
+					content: "";
+					background-color: $green1;
+					width: 0.8em;
+					height: 0.8em;
+					border-radius: 50%;
+					position: absolute;
+					top: 0.3em;
+					left: 0;
+				}
 			}
 		}
 		@include mq{
@@ -250,7 +261,7 @@
 				display: block;
 				> li{
 					width: auto;
-					padding: 0 0 0.5em;
+					padding: 0 0 0.5em 1.2em;
 				}
 			}
 		}
@@ -504,15 +515,9 @@
 
 	/* テーブル */
 	&tbl1{
-		background-color: #fff;
-		padding: 0 15px;
-		font-size: 14px;
-		border: 1px solid $green1;
-		@include mq{
-			padding: 0 10px;
-		}
 		table{
 			width: 100%;
+			font-size: 14px;
 			@include mq{
 				display: block;
 			}
@@ -523,29 +528,84 @@
 			}
 		}
 		tr{
-			& + tr{
-				border-top: 1px dotted $green1;
-			}
+			border-bottom: 1px solid #e5e5e5;
 			@include mq{
 				display: block;
-				padding: 10px 0;
+				padding: 8px;
 			}
 		}
 		th{
-			padding: 10px 0;
-			color: $green1;
-			font-weight: bold;
+			padding: 15px;
+			@include mq{
+				display: block;
+				padding: 0 0 5px;
+				font-weight: bold;
+			}
+		}
+		td{
+			padding: 15px 15px 15px 0;
 			@include mq{
 				display: block;
 				padding: 0;
 			}
 		}
-		td{
+	}
+	&tbl2{
+		font-size: 14px;
+		@include mq{
+		}
+		table{
 			width: 100%;
-			padding: 10px 0 10px 30px;
+			border: 1px solid $green1;
+			@include mq{
+				display: block;
+				border: none;
+			}
+		}
+		thead{
+			@include mq{
+				display: block;
+			}
+			th,
+			td{
+				text-align: center;
+			}
+		}
+		tbody{
+			@include mq{
+				display: block;
+			}
+			tr{
+				border-top: 1px solid $green1;
+				@include mq{
+					border-top: none;
+				}
+			}
+		}
+		tr{
+			& + tr{
+			}
 			@include mq{
 				display: block;
 				padding: 0;
+			}
+		}
+		th{
+			background-color: $green2;
+			padding: 15px;
+			color: $green1;
+			font-weight: bold;
+			white-space: nowrap;
+			@include mq{
+				display: block;
+				padding: 8px;
+			}
+		}
+		td{
+			padding: 15px;
+			@include mq{
+				display: block;
+				padding: 8px;
 			}
 		}
 	}

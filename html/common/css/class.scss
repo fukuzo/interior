@@ -7,6 +7,11 @@
 .sp{display: none !important;}
 
 .c-{
+	/*-- Width --*/
+	&bg{
+		&Wht{background-color: #fff;}
+	}
+
 	&W{
 	/*-- Width --*/
 		&A{width:auto !important;}
@@ -32,7 +37,7 @@
 		&BA{margin-bottom: auto !important;}
 		&LA{margin-left: auto !important;}
 		&0{margin: 0 !important;}
-		@for $iM from 1 through 100{
+		@for $iM from 0 through 100{
 			&T#{$iM}{
 				&{margin-top: $iM * 1px !important;}
 				&P{margin-top: $iM * 1% !important;}
@@ -72,34 +77,34 @@
 		&BA{padding-bottom: auto !important;}
 		&LA{padding-left: auto !important;}
 		&0{padding: 0 !important;}
-		@for $iM from 1 through 100{
-			&T#{$iM}{
-				&{padding-top: $iM * 1px !important;}
-				&P{padding-top: $iM * 1% !important;}
-				&V{padding-top: $iM * 1vw !important;}
-				&E{padding-top: $iM * 0.1em !important;}
-				&R{padding-top: $iM * 0.1rem !important;}
+		@for $iP from 0 through 100{
+			&T#{$iP}{
+				&{padding-top: $iP * 1px !important;}
+				&P{padding-top: $iP * 1% !important;}
+				&V{padding-top: $iP * 1vw !important;}
+				&E{padding-top: $iP * 0.1em !important;}
+				&R{padding-top: $iP * 0.1rem !important;}
 			}
-			&R#{$iM}{
-				&{padding-right: $iM * 1px !important;}
-				&P{padding-right: $iM * 1% !important;}
-				&V{padding-right: $iM * 1vw !important;}
-				&E{padding-right: $iM * 0.1em !important;}
-				&R{padding-right: $iM * 0.1rem !important;}
+			&R#{$iP}{
+				&{padding-right: $iP * 1px !important;}
+				&P{padding-right: $iP * 1% !important;}
+				&V{padding-right: $iP * 1vw !important;}
+				&E{padding-right: $iP * 0.1em !important;}
+				&R{padding-right: $iP * 0.1rem !important;}
 			}
-			&B#{$iM}{
-				&{padding-bottom: $iM * 1px !important;}
-				&P{padding-bottom: $iM * 1% !important;}
-				&V{padding-bottom: $iM * 1vw !important;}
-				&E{padding-bottom: $iM * 0.1em !important;}
-				&R{padding-bottom: $iM * 0.1rem !important;}
+			&B#{$iP}{
+				&{padding-bottom: $iP * 1px !important;}
+				&P{padding-bottom: $iP * 1% !important;}
+				&V{padding-bottom: $iP * 1vw !important;}
+				&E{padding-bottom: $iP * 0.1em !important;}
+				&R{padding-bottom: $iP * 0.1rem !important;}
 			}
-			&L#{$iM}{
-				&{padding-left: $iM * 1px !important;}
-				&P{padding-left: $iM * 1% !important;}
-				&V{padding-left: $iM * 1vw !important;}
-				&E{padding-left: $iM * 0.1em !important;}
-				&R{padding-left: $iM * 0.1rem !important;}
+			&L#{$iP}{
+				&{padding-left: $iP * 1px !important;}
+				&P{padding-left: $iP * 1% !important;}
+				&V{padding-left: $iP * 1vw !important;}
+				&E{padding-left: $iP * 0.1em !important;}
+				&R{padding-left: $iP * 0.1rem !important;}
 			}
 		}
 	}
@@ -205,7 +210,7 @@
 		&BA{margin-bottom: auto !important;}
 		&LA{margin-left: auto !important;}
 		&0{margin: 0 !important;}
-		@for $iM from 1 through 100{
+		@for $iM from 0 through 100{
 			&T#{$iM}{
 				&{margin-top: $iM * 1px !important;}
 				&P{margin-top: $iM * 1% !important;}
@@ -245,34 +250,34 @@
 		&BA{padding-bottom: auto !important;}
 		&LA{padding-left: auto !important;}
 		&0{padding: 0 !important;}
-		@for $iM from 1 through 100{
-			&T#{$iM}{
-				&{padding-top: $iM * 1px !important;}
-				&P{padding-top: $iM * 1% !important;}
-				&V{padding-top: $iM * 1vw !important;}
-				&E{padding-top: $iM * 0.1em !important;}
-				&R{padding-top: $iM * 0.1rem !important;}
+		@for $iP from 0 through 100{
+			&T#{$iP}{
+				&{padding-top: $iP * 1px !important;}
+				&P{padding-top: $iP * 1% !important;}
+				&V{padding-top: $iP * 1vw !important;}
+				&E{padding-top: $iP * 0.1em !important;}
+				&R{padding-top: $iP * 0.1rem !important;}
 			}
-			&R#{$iM}{
-				&{padding-right: $iM * 1px !important;}
-				&P{padding-right: $iM * 1% !important;}
-				&V{padding-right: $iM * 1vw !important;}
-				&E{padding-right: $iM * 0.1em !important;}
-				&R{padding-right: $iM * 0.1rem !important;}
+			&R#{$iP}{
+				&{padding-right: $iP * 1px !important;}
+				&P{padding-right: $iP * 1% !important;}
+				&V{padding-right: $iP * 1vw !important;}
+				&E{padding-right: $iP * 0.1em !important;}
+				&R{padding-right: $iP * 0.1rem !important;}
 			}
-			&B#{$iM}{
-				&{padding-bottom: $iM * 1px !important;}
-				&P{padding-bottom: $iM * 1% !important;}
-				&V{padding-bottom: $iM * 1vw !important;}
-				&E{padding-bottom: $iM * 0.1em !important;}
-				&R{padding-bottom: $iM * 0.1rem !important;}
+			&B#{$iP}{
+				&{padding-bottom: $iP * 1px !important;}
+				&P{padding-bottom: $iP * 1% !important;}
+				&V{padding-bottom: $iP * 1vw !important;}
+				&E{padding-bottom: $iP * 0.1em !important;}
+				&R{padding-bottom: $iP * 0.1rem !important;}
 			}
-			&L#{$iM}{
-				&{padding-left: $iM * 1px !important;}
-				&P{padding-left: $iM * 1% !important;}
-				&V{padding-left: $iM * 1vw !important;}
-				&E{padding-left: $iM * 0.1em !important;}
-				&R{padding-left: $iM * 0.1rem !important;}
+			&L#{$iP}{
+				&{padding-left: $iP * 1px !important;}
+				&P{padding-left: $iP * 1% !important;}
+				&V{padding-left: $iP * 1vw !important;}
+				&E{padding-left: $iP * 0.1em !important;}
+				&R{padding-left: $iP * 0.1rem !important;}
 			}
 		}
 	}

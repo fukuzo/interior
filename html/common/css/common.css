@@ -1077,6 +1077,9 @@ blockquote:before {
       .l-container > .l-inner {
         padding-top: 20px;
         padding-bottom: 30px; } }
+  .l-container.type2 {
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5; }
 
 .l-footer .inqs {
   background-color: #fff;
@@ -1339,7 +1342,17 @@ blockquote:before {
     flex-wrap: wrap; }
     .u-txtList1 > ul > li {
       width: 50%;
-      padding: 0 1em 1em 0; }
+      padding: 0 1em 1em 1.2em;
+      position: relative; }
+      .u-txtList1 > ul > li:before {
+        content: "";
+        background-color: #136a64;
+        width: 0.8em;
+        height: 0.8em;
+        border-radius: 50%;
+        position: absolute;
+        top: 0.3em;
+        left: 0; }
   @media screen and (max-width: 767px) {
     .u-txtList1 {
       font-size: 16px; }
@@ -1347,7 +1360,7 @@ blockquote:before {
         display: block; }
         .u-txtList1 > ul > li {
           width: auto;
-          padding: 0 0 0.5em; } }
+          padding: 0 0 0.5em 1.2em; } }
   .u-thumList1 {
     padding-bottom: 5px; }
     .u-thumList1 > ul {
@@ -1531,43 +1544,77 @@ blockquote:before {
       @media screen and (max-width: 767px) {
         .u-thumTxtList2 > ul > li .btn {
           margin: 15px 0 0; } }
-  .u-tbl1 {
-    background-color: #fff;
-    padding: 0 15px;
-    font-size: 14px;
-    border: 1px solid #136a64; }
+  .u-tbl1 table {
+    width: 100%;
+    font-size: 14px; }
     @media screen and (max-width: 767px) {
-      .u-tbl1 {
-        padding: 0 10px; } }
-    .u-tbl1 table {
-      width: 100%; }
-      @media screen and (max-width: 767px) {
-        .u-tbl1 table {
-          display: block; } }
-    @media screen and (max-width: 767px) {
-      .u-tbl1 tbody {
+      .u-tbl1 table {
         display: block; } }
-    .u-tbl1 tr + tr {
-      border-top: 1px dotted #136a64; }
+  @media screen and (max-width: 767px) {
+    .u-tbl1 tbody {
+      display: block; } }
+  .u-tbl1 tr {
+    border-bottom: 1px solid #e5e5e5; }
     @media screen and (max-width: 767px) {
       .u-tbl1 tr {
         display: block;
-        padding: 10px 0; } }
-    .u-tbl1 th {
-      padding: 10px 0;
-      color: #136a64;
-      font-weight: bold; }
-      @media screen and (max-width: 767px) {
-        .u-tbl1 th {
-          display: block;
-          padding: 0; } }
-    .u-tbl1 td {
+        padding: 8px; } }
+  .u-tbl1 th {
+    padding: 15px; }
+    @media screen and (max-width: 767px) {
+      .u-tbl1 th {
+        display: block;
+        padding: 0 0 5px;
+        font-weight: bold; } }
+  .u-tbl1 td {
+    padding: 15px 15px 15px 0; }
+    @media screen and (max-width: 767px) {
+      .u-tbl1 td {
+        display: block;
+        padding: 0; } }
+  .u-tbl2 {
+    font-size: 14px; }
+    .u-tbl2 table {
       width: 100%;
-      padding: 10px 0 10px 30px; }
+      border: 1px solid #136a64; }
       @media screen and (max-width: 767px) {
-        .u-tbl1 td {
+        .u-tbl2 table {
           display: block;
-          padding: 0; } }
+          border: none; } }
+    @media screen and (max-width: 767px) {
+      .u-tbl2 thead {
+        display: block; } }
+    .u-tbl2 thead th,
+    .u-tbl2 thead td {
+      text-align: center; }
+    @media screen and (max-width: 767px) {
+      .u-tbl2 tbody {
+        display: block; } }
+    .u-tbl2 tbody tr {
+      border-top: 1px solid #136a64; }
+      @media screen and (max-width: 767px) {
+        .u-tbl2 tbody tr {
+          border-top: none; } }
+    @media screen and (max-width: 767px) {
+      .u-tbl2 tr {
+        display: block;
+        padding: 0; } }
+    .u-tbl2 th {
+      background-color: #9dd1cf;
+      padding: 15px;
+      color: #136a64;
+      font-weight: bold;
+      white-space: nowrap; }
+      @media screen and (max-width: 767px) {
+        .u-tbl2 th {
+          display: block;
+          padding: 8px; } }
+    .u-tbl2 td {
+      padding: 15px; }
+      @media screen and (max-width: 767px) {
+        .u-tbl2 td {
+          display: block;
+          padding: 8px; } }
   .u-imgBox1 {
     text-align: center; }
     .u-imgBox1 img {
