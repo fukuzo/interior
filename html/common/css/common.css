@@ -71,7 +71,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font: inherit/1.4 "游明朝体", "Yu Mincho", YuMincho, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif; }
+  font: inherit/1.4 "メイリオ", Meiryo, "ＭＳ ゴシック", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", sans-serif; }
   @media screen and (max-width: 767px) {
     body {
       -webkit-text-size-adjust: 100%; } }
@@ -1160,6 +1160,36 @@ blockquote:before {
   padding-left: 15px;
   padding-right: 15px; }
 
+.l-toTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  transition: opacity 0.3s; }
+  .l-toTop:before {
+    content: "";
+    display: block;
+    width: 36%;
+    height: 36%;
+    border-top: 5px solid #fff;
+    border-right: 5px solid #fff;
+    transform: translate(1%, 24%) rotate(-45deg); }
+  .l-toTop:hover {
+    opacity: 0.7; }
+  @media screen and (max-width: 767px) {
+    .l-toTop {
+      width: 30px;
+      height: 30px;
+      bottom: 5px;
+      right: 5px; }
+      .l-toTop:before {
+        border-width: 4px 4px 0 0; } }
+
 .u- {
   /* タイトル */
   /* リンク */
@@ -1749,6 +1779,8 @@ blockquote:before {
         text-align: center; }
         .u-nav1 span {
           display: block;
+          margin-right: 0;
+          padding-right: 0;
           border-right: none; }
           .u-nav1 span + span {
             margin-top: 5px; } }

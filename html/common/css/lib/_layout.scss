@@ -356,4 +356,34 @@
 	padding-right: 15px;
 }
 
-
+.l-toTop{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0,0,0,0.8);
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	transition: opacity 0.3s;
+	&:before{
+		content: "";
+		display: block;
+		width: 36%;
+		height: 36%;
+		border-top: 5px solid #fff;
+		border-right: 5px solid #fff;
+		transform: translate(1%, 24%) rotate(-45deg);
+	}
+	&:hover{opacity: 0.7;}
+	@include mq{
+		width: 30px;
+		height: 30px;
+		bottom: 5px;
+		right: 5px;
+		&:before{
+			border-width: 4px 4px 0 0;
+		}
+	}
+}

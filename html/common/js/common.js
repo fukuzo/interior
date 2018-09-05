@@ -50,6 +50,11 @@ $(".u-thumTxtList2 .clkImgs a").click(function(){
 });
 
 
+//topへ戻るボタン
+$(".l-toTop").click(function(){
+	$('html,body').animate({scrollTop: 0}, 400, 'swing');
+	return false;
+});
 
 //$(".cbYt1").colorbox({iframe:true, innerWidth:720, innerHeight:480});
 //$(".cbPh1").colorbox({opacity: 0.5});	
