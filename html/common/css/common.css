@@ -71,7 +71,9 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font: inherit/1.4 "メイリオ", Meiryo, "ＭＳ ゴシック", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", sans-serif; }
+  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+  font-style: inherit;
+  line-height: 1.4; }
   @media screen and (max-width: 767px) {
     body {
       -webkit-text-size-adjust: 100%; } }
