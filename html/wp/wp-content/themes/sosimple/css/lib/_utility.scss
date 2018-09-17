@@ -1,0 +1,825 @@
+@charset "utf-8";
+
+@import "mq";
+@import "var";
+@import "mixin";
+@import "fnc";
+
+.u-{
+	/* タイトル */
+	&ttl1{
+		background-color: $green1;
+		padding: 0.6em 0 0.4em;
+		color: #fff;
+		font-size: 32px;
+		@include mq{
+			font-size: 20px;
+		}
+	}
+	&ttl2{
+		margin-bottom: 1em;
+		padding-bottom: 0.2em;
+		color: $green1;
+		font-size: 30px;
+		border-bottom: 2px solid $green1;
+		@include mq{
+			margin-bottom: 0.6em;
+			font-size: 20px;
+		}
+	}
+
+	/* リンク */
+	&link1{
+		color: #666;
+		text-decoration: underline;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+	&links1{
+		@include mq{
+		}
+	}
+
+	/* ボタン */
+	&btn{
+		display: inline-block;
+		@include hvr;
+		&.type1{
+			padding: 8px 25px;
+			font-size: 16px;
+			border-radius: 5px;
+		}
+		&.type2{
+			padding: 15px 45px;
+			font-size: 18px;
+			border-radius: 5px;
+		}
+		&.type3{
+			padding: 8px 45px;
+			font-size: 18px;
+			border-radius: 5px;
+		}
+		&.clr1{
+			background-color: $orange1;
+			color: #fff;
+		}
+		&.clr2{
+		}
+		&.withArwR1{
+			text-align: center;
+			position: relative;
+			&:after{
+				content: "";
+				width: 0.5em;
+				height: 0.5em;
+				margin: auto;
+				border-right: 2px solid #fff;
+				border-bottom: 2px solid #fff;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0.8em;
+				transform: translateY(0em) rotate(-45deg);
+			}
+			@include mq{
+			}
+		}
+		&.withIcn{
+			i{
+				font-size: 1.4em;
+				margin-right: em(10/(1.4*16));
+				vertical-align: middle;
+			}
+			.txt{
+				display: inline-block;
+				padding-top: 2px;
+				vertical-align: middle;
+			}
+		}
+	}
+	&fixBtnL1{
+		background-color: rgba(0,0,0,0.9);
+		padding: 8px 10px;
+		color: #fff;
+		font-size: 12px;
+		text-align: center;
+		position: fixed;
+		top: 40%;
+		left: 0;
+		z-index: 1;
+		@include hvr;
+		.fa-bars{
+			color: #979797;
+			font-size: 2.8em;
+		}
+		p{
+			padding-top: 0.5em;
+		}
+		@include mq{
+			padding: 5px 10px;
+			font-size: 10px;
+			.fa-bars{
+				
+			}
+		}
+	}
+	&btnAcrd1{
+		&.show{
+		}
+	}
+
+	/* ラベル */
+	&lbl{
+		display: inline-block;
+		&.type1{
+			border-radius: 5px;
+			@include mq{
+				padding: vw(1) vw(8) 0;
+				border-radius: vw(8);
+			}
+		}
+		&.clr1{
+			background-color: $orange1;
+			padding: 2px 5px 0;
+			color: #fff;
+			font-size: 12px;
+			font-weight: bold;
+		}
+	}
+
+	/* アイコン */
+	&icn{
+		&:before{
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+		}
+		&.is_{
+		}
+		&Blank{
+			@include mq{
+			}
+		}
+	}
+
+	/* タグ */
+	&tags1{
+		background-color: $siteColor;
+		.l-inner{
+			display: flex;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			@include mq{
+				display: block;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+			dl{
+				display: flex;
+				align-items: center;
+				& + dl{
+					margin-left: 30px;
+				}
+				@include mq{
+					display: block;
+					& + dl{
+						margin: 10px 0 0;
+					}
+				}
+				dt{
+					background-color: $green2;
+					margin-right: 0.9em;
+					padding: 0.3em 1.0em 0.1em;
+					color: $green1;
+					font-size: 14px;
+					position: relative;
+					&:after{
+						content: "";
+						display: block;
+						background: url(https://interior-yamashita.com/wp/wp-content/uploads/2018/09/bg_arw_r2.png) 0 0 no-repeat;
+						background-size: 100% 100%;
+						width: 0.9em;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						right: -0.9em;
+					}
+					@include mq{
+						margin-right: 0;
+						font-size: 13px;
+						text-align: center;
+						&:after{content: normal;}
+					}
+				}
+				dd{
+					padding-left: 0.8em;
+					color: #fff;
+					font-size: 13px;
+					@include mq{
+						padding: 0.5em 0 0;
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+
+	/* テキスト */
+	&txt1{
+		font-size: 14px;
+	}
+	&lead1{
+		@include pc{
+		}
+	}
+
+	/* リスト */
+	&txtList1{
+		> ul{
+			display: flex;
+			flex-wrap: wrap;
+			> li{
+				width: 50%;
+				padding: 0 1em 1em 1.2em;
+				position: relative;
+				&:before{
+					content: "";
+					background-color: $green1;
+					width: 0.8em;
+					height: 0.8em;
+					border-radius: 50%;
+					position: absolute;
+					top: 0.3em;
+					left: 0;
+				}
+			}
+		}
+		@include mq{
+			font-size: 16px;
+			> ul{
+				display: block;
+				> li{
+					width: auto;
+					padding: 0 0 0.5em 1.2em;
+				}
+			}
+		}
+	}
+	&thumList1{
+		padding-bottom: 5px;
+		> ul{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			> li{
+				width: percentage(295/926);
+				margin-bottom: 2%;
+				border: 1px solid $green2;
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		@include mq{
+			padding-bottom: 10px;
+			> ul{
+				> li{
+					width: 49%;
+				}
+			}
+		}
+	}
+	&txtList1{
+		@include mq{
+		}
+	}
+	&thumTxtList1{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		@include mq{
+		}
+		> article{
+			display: block;
+			background-color: #fff;
+			width: 49%;
+			margin-bottom: 2%;
+			border: 1px solid #d4d4d4;
+			border-radius: 3px;
+			box-sizing: border-box;
+			@include mq{
+				width: 100% !important;
+				margin-bottom: 10px;
+			}
+			a{
+				display: block;
+				height: 100%;
+				padding: 15px;
+				box-sizing: border-box;
+				@include hvrScale;
+			}
+			.entry-title,
+			.ttl{
+				background: url(https://interior-yamashita.com/wp/wp-content/uploads/2018/09/icn_arw_r1.png) 0 0.15em no-repeat;
+				margin-bottom: 10px;
+				padding-left: 27px;
+				color: $siteColor;
+				font-size: 18px;
+				word-break: break-all;
+				transition: opacity 0.3s;
+				@include mq{
+					font-size: 16px;
+				}
+			}
+			.img{
+				margin-bottom: 10px;
+				img{
+					@include img100;
+				}
+				@include mq{
+				}
+			}
+			p{
+				font-size: 0.8em;
+				transition: opacity 0.3s;
+				@include mq{
+					font-size: 12px;
+				}
+			}
+			&:nth-child(n + 5){
+				width: 23.5%;
+				@include mq{
+				}
+			}
+			&:hover{
+				.entry-title,
+				.ttl,
+				p{
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+	&thumTxtList2{
+		> ul{
+			> li{
+				background-color: #ecf0f1;
+				padding: 35px 0;
+				&:nth-child(even){
+					background-color: #f7f9f8;
+				}
+				@include mq{
+					padding: 15px 0 20px;
+				}
+				.l-inner{
+				}
+				.colL{
+					width: percentage(297/926);
+					float: left;
+					@include mq{
+						width: auto;
+						float: none;
+					}
+				}
+				.colR{
+					width: percentage(602/926);
+					float: right;
+					@include mq{
+						width: auto;
+						float: none;
+					}
+				}
+				.u-ttl2{
+					margin-bottom: 0.4em;
+					@include mq{
+					}
+				}
+				.tags{
+					@include mq{
+						padding-bottom: 15px;
+					}
+					dl{
+						display: flex;
+						align-items: center;
+						& + dl{
+							margin-top: 10px;
+							padding-top: 10px;
+							border-top: 1px dotted $green2;
+						}
+						@include mq{
+							display: block;
+							& + dl{
+							}
+						}
+						dt{
+							background-color: $green2;
+							margin-right: 0.9em;
+							width: 80px;
+							padding: 0.3em 0 0.1em;
+							color: $green1;
+							font-size: 14px;
+							text-align: center;
+							position: relative;
+							&:after{
+								content: "";
+								display: block;
+								background: url(https://interior-yamashita.com/wp/wp-content/uploads/2018/09/bg_arw_r2.png) 0 0 no-repeat;
+								background-size: 100% 100%;
+								width: 0.9em;
+								position: absolute;
+								top: 0;
+								bottom: 0;
+								right: -0.9em;
+							}
+							@include mq{
+								width: auto;
+								margin-right: 0;
+								font-size: 13px;
+								&:after{content: normal;}
+							}
+						}
+						dd{
+							padding-left: 0.8em;
+							font-size: 13px;
+							@include mq{
+								padding: 0.5em 0 0;
+								font-size: 12px;
+							}
+						}
+					}
+				}
+				.showImg{
+					border: 1px solid $siteColor;
+					img{
+						width: 100%;
+						height: auto;
+					}
+					@include mq{
+					}
+				}
+				.thum_btn{
+					display: flex;
+					align-items: flex-end;
+					@include mq{
+						display: block;
+					}
+				}
+				.clkImgs{
+					margin-top: 15px;
+					display: flex;
+					align-items: flex-start;
+					@include mq{
+					}
+					a{
+						width: 30%;
+						max-width: 102px;
+						border: 1px solid $siteColor;
+						overflow: hidden;
+						& + a{
+							margin-left: 15px;
+						}
+						&.show{
+							border-color: $orange1;
+						}
+						@include mq{
+							margin: 0 5% 0 0 !important;
+							max-width: none;
+							&:nth-child(3n){
+								margin-right: 0 !important;
+							}
+						}
+						img{
+							max-width: 100%;
+							height: auto;
+							transition: 0.3s;
+						}
+						&:hover{
+							img{
+								transform: scale(1.1);
+							}
+						}
+					}
+				}
+				.btn{
+					flex-shrink: 0;
+					margin-left: 15px;
+					a{
+						display: block;
+						.txt{
+							padding-top: 0;
+						}
+					}
+					@include mq{
+						margin: 15px 0 0;
+						a{
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/* テーブル */
+	&tbl1{
+		table{
+			width: 100%;
+			font-size: 14px;
+			@include mq{
+				display: block;
+			}
+		}
+		tbody{
+			@include mq{
+				display: block;
+			}
+		}
+		tr{
+			border-bottom: 1px solid #e5e5e5;
+			@include mq{
+				display: block;
+				padding: 8px;
+			}
+		}
+		th{
+			padding: 15px;
+			@include mq{
+				display: block;
+				padding: 0 0 5px;
+				font-weight: bold;
+			}
+		}
+		td{
+			padding: 15px 15px 15px 0;
+			@include mq{
+				display: block;
+				padding: 0;
+			}
+		}
+		.gMap{
+			width: 80%;
+			margin-top: 15px;
+			padding-top: 50%;
+			border: 1px solid $green2;
+			position: relative;
+			overflow: hidden;
+			span{
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			iframe{
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			@include mq{
+				width: auto;
+				margin-top: 10px;
+				padding-top: 80%;
+			}
+		}
+	}
+	&tbl2{
+		font-size: 14px;
+		@include mq{
+		}
+		table{
+			width: 100%;
+			border: 1px solid $green1;
+			@include mq{
+				display: block;
+				border: none;
+			}
+		}
+		thead{
+			@include mq{
+				display: block;
+			}
+			th,
+			td{
+				text-align: center;
+			}
+		}
+		tbody{
+			@include mq{
+				display: block;
+			}
+			tr{
+				border-top: 1px solid $green1;
+				@include mq{
+					border-top: none;
+				}
+			}
+		}
+		tr{
+			& + tr{
+			}
+			@include mq{
+				display: block;
+				padding: 0;
+			}
+		}
+		th{
+			background-color: $green2;
+			padding: 15px;
+			color: $green1;
+			font-weight: bold;
+			white-space: nowrap;
+			@include mq{
+				display: block;
+				padding: 8px;
+			}
+		}
+		td{
+			padding: 15px;
+			@include mq{
+				display: block;
+				padding: 8px;
+			}
+		}
+	}
+
+	/* 箱 */
+	&imgBox1{
+		text-align: center;
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	&txtBox1{
+		@include mq{
+			font-size: 16px;
+		}
+	}
+	&imgTxtBox1{
+		> .in{
+			display: flex;
+			justify-content: space-between;
+			@include mq{
+				display: block;
+			}
+		}
+		.txts{
+			width: 48%;
+			line-height: 2;
+			@include mq{
+				width: auto;
+				font-size: 16px;
+				line-height: 1.8;
+			}
+			p{
+				& + p{
+					margin-top: 1em;
+				}
+				@include mq{
+				}
+			}
+			.sign{
+				margin-top: 2em;
+				line-height: 1.4;
+				@include mq{
+					margin-top: 1em;
+				}
+				small{
+					display: block;
+					font-size: 0.8em;
+					@include mq{
+					}
+				}
+				strong{
+					display: block;
+					margin-top: 0.2em;
+					font-family: "Yu Mincho";
+					font-size: 1.6em;
+					font-weight: bold;
+					@include mq{
+					}
+				}
+			}
+		}
+		.img{
+			flex-shrink: 0;
+			width: percentage(442/926);
+			img{
+				max-width: 100%;
+				height: auto;
+			}
+			@include mq{
+				width: auto;
+				margin-top: 5vw;
+			}
+		}
+	}
+
+	/* ページャー */
+	&pager1{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 30px;
+		line-height: 1;
+		@include mq{
+			margin-top: 20px;
+		}
+		* + *{
+			margin-left: 0.7em;
+		}
+		a{
+			@include hvr;
+			&.pre,
+			&.nxt{
+				width: 0.7em;
+				height: 0.7em;
+				border-bottom: 1px solid $siteColor;
+			}
+			&.pre{
+				border-left: 1px solid $siteColor;
+				transform: translateY(0.1em) rotate(45deg);
+			}
+			&.nxt{
+				border-right: 1px solid $siteColor;
+				transform: translateY(0.1em) rotate(-45deg);
+			}
+		}
+		.num{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #fff;
+			width: 2em;
+			height: 2em;
+			color: $siteColor;
+			border: 1px solid $siteColor;
+			&.here{
+				background-color: $siteColor;
+				color: #fff;
+			}
+		}
+		@include mq{
+		}
+	}
+
+	/* ナビ */
+	&nav1{
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+		span{
+			display: inline-block;
+			margin-right: 15px;
+			padding-right: 15px;
+			border-right: 1px solid #fff;
+			&:last-child{
+				margin-right: 0;
+				padding-right: 0;
+				border-right: none;
+			}
+			a{
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+		@include mq{
+			display: block;
+			font-size: 12px;
+			margin-bottom: 5px;
+			text-align: center;
+			span{
+				display: block;
+				margin-right: 0;
+				padding-right: 0;
+				border-right: none;
+				& + span{
+					margin-top: 5px;
+				}
+				&:last-child{
+				}
+			}
+		}
+	}
+
+
+	/* その他 */
+	//jsによる長文の省略
+	.clamp{
+		//heightは個別に指定
+		overflow: hidden;
+	}
+	.clamp2{
+		//max-heightは個別に指定
+		overflow: hidden;
+	}
+
+
+}
+
+
+
+

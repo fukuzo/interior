@@ -326,7 +326,7 @@ figure {
 
 table {
     width: 100%;
-    margin: 0 0 24px;
+/*    margin: 0 0 24px;*/
 }
 
 th {
@@ -923,7 +923,7 @@ figure {
 
 table {
     width: 100%;
-    margin-bottom: 27px;
+/*    margin-bottom: 27px;*/
 }
 
 td,
@@ -1138,10 +1138,12 @@ a:active {
 
 /* =Content */
 .hentry {
+/*
     position: relative;
     margin: 0 0 53px;
     padding: 0 0 27px;
     border-bottom: 1px solid #eee;
+*/
 }
 
 .site-main .hentry:last-of-type {
@@ -1196,21 +1198,23 @@ a:active {
 }
 
 .entry-title {
+/*
     font-size: 1.75em;
     line-height: 1.10em;
     line-height: 1.21429em;
     margin: 0 0 7px;
+*/
 }
 .entry-title a,
 .entry-title a:visited {
     text-decoration: none;
-    color: #666;
+/*    color: #666;*/
 }
 .entry-title a:hover {
-    color: #1c7c7c;
+/*    color: #1c7c7c;*/
 }
 .page .entry-title {
-	margin: 0 0 27px;
+/*	margin: 0 0 27px;*/
 }
 
 .sep {
@@ -1942,14 +1946,16 @@ div.sharedaddy div.sd-block {
     }
 
     .entry-title {
-        font-size: 32px;
+/*        font-size: 32px;*/
         text-transform: capitalize;
     }
 
     .content-area {
+/*
         float: left;
         width: 100%;
         margin: 0 -30% 0 0;
+*/
     }
 
     .site-main {
@@ -1988,8 +1994,10 @@ div.sharedaddy div.sd-block {
     }
 
     .entry-content {
+/*
         font-size: 1.2em;
         line-height: 1.7em;
+*/
     }
     pre {
     	font-size: 1em;

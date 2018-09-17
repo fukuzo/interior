@@ -19,7 +19,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 	<?php if ( has_post_thumbnail() ) : ?>
-		<div class="entry-thumbnail">
+		<div class="entry-thumbnail img">
 			<?php the_post_thumbnail( 'sosimple-featured' ); ?>
 		</div>
 	<?php endif; ?>

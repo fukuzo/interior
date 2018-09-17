@@ -19,7 +19,16 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
+<?php if( 1==2 ) : ?>
 			<?php the_post_navigation(); ?>
+<?php endif; ?>
+
+<p class="wpCate"><?php
+	$category = get_the_category();
+	$cat_name = $category[0]->name;
+	echo $cat_name;
+	?></p>
+<p class="wpTags"><?php the_tags(); ?></p>
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template.

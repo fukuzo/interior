@@ -13,6 +13,8 @@
 
 get_header(); ?>
 
+	<div class="l-container">
+	<div class="l-inner">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<section class="u-thumTxtList1">
@@ -45,6 +47,8 @@ get_header(); ?>
 				</section>
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	</div><!-- /.l-inner -->
+	</div><!-- /.l-container -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -1,6 +1,63 @@
-/*----------------------
-        custom
-----------------------*/
+@charset "UTF-8";
+/* リセット
+---------------------------------------------------- */
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url(https://fonts.googleapis.com/earlyaccess/sawarabimincho.css);
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 100%; }
+
+fieldset, img {
+  border: 0;
+  vertical-align: top; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6, small {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+br {
+  letter-spacing: normal; }
+
+/* to preserve line-height and selector appearance */
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+/*to enable resizing for IE*/
+input, textarea, select {
+  *font-size: 100%; }
+
+/* ページ共通
+---------------------------------------------------- */
 html {
   color: #333;
   font-size: 16px;
@@ -16,10 +73,10 @@ body {
   padding: 0;
   font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
   font-style: inherit;
-  line-height: 1.4;
--webkit-text-size-adjust: 100%; }
+  line-height: 1.4; }
   @media screen and (max-width: 767px) {
-    }
+    body {
+      -webkit-text-size-adjust: 100%; } }
 
 *:first-child + html body {
   font-size: 87%; }
@@ -66,6 +123,9 @@ overflow: hidden;
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased; }
+
+body {
+  -webkit-text-size-adjust: 100%; }
 
 a {
   text-decoration: none; }
@@ -947,7 +1007,7 @@ blockquote:before {
           position: relative; }
           .l-header .hdRow3 .l-inner dl dt:after {
             content: "";
-            background: url(../img/bg_arw_r1.png) 0 0 no-repeat;
+            background: url(https://interior-yamashita.com/wp/wp-content/uploads/2018/09/bg_arw_r1.png) 0 0 no-repeat;
             background-size: 100% 100%;
             width: 1em;
             position: absolute;
@@ -1096,7 +1156,7 @@ blockquote:before {
         text-align: center; } }
 
 .l-inner {
-  max-width: 956px;
+  max-width: 1095px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -1146,22 +1206,12 @@ blockquote:before {
   /* ページャー */
   /* ナビ */
   /* その他 */ }
-  .single .entry-title {
-    background-color: #136a64;
-	margin: 0;
-    padding: 0.6em 0.4em 0.4em;
-    color: #fff;
-    font-size: 32px; }
-    @media screen and (max-width: 767px) {
-      .single .entry-title{
-        font-size: 20px; } }
   .u-ttl1 {
     background-color: #136a64;
     padding: 0.6em 0 0.4em;
     color: #fff;
     font-size: 32px; }
     @media screen and (max-width: 767px) {
-      .entry-title,
       .u-ttl1 {
         font-size: 20px; } }
   .u-ttl2 {
@@ -1295,7 +1345,7 @@ blockquote:before {
           .u-tags1 .l-inner dl dt:after {
             content: "";
             display: block;
-            background: url(../img/bg_arw_r2.png) 0 0 no-repeat;
+            background: url(https://interior-yamashita.com/wp/wp-content/uploads/2018/09/bg_arw_r2.png) 0 0 no-repeat;
             background-size: 100% 100%;
             width: 0.9em;
             position: absolute;
@@ -1367,9 +1417,9 @@ blockquote:before {
     flex-wrap: wrap; }
     .u-thumTxtList1 > article {
       display: block;
+      background-color: #fff;
       width: 49%;
       margin-bottom: 2%;
-      padding: 0;
       border: 1px solid #d4d4d4;
       border-radius: 3px;
       box-sizing: border-box; }
@@ -1378,13 +1428,17 @@ blockquote:before {
           width: 100% !important;
           margin-bottom: 10px; } }
       .u-thumTxtList1 > article a {
-		display: block;
-        background-color: #fff;
-		height: 100%;
-		padding: 15px;
-		border-radius: 3px;
+        display: block;
+        height: 100%;
+        padding: 15px;
         box-sizing: border-box; }
-      .u-thumTxtList1 > article .entry-title ,
+        .u-thumTxtList1 > article a .img {
+          overflow: hidden; }
+          .u-thumTxtList1 > article a .img img {
+            transition: transform 0.3s; }
+        .u-thumTxtList1 > article a:hover .img img {
+          transform: scale(1.1); }
+      .u-thumTxtList1 > article .entry-title,
       .u-thumTxtList1 > article .ttl {
         background: url(https://interior-yamashita.com/wp/wp-content/uploads/2018/09/icn_arw_r1.png) 0 0.15em no-repeat;
         margin-bottom: 10px;
@@ -1394,15 +1448,9 @@ blockquote:before {
         word-break: break-all;
         transition: opacity 0.3s; }
         @media screen and (max-width: 767px) {
-          .u-thumTxtList1 > article .entry-title ,
+          .u-thumTxtList1 > article .entry-title,
           .u-thumTxtList1 > article .ttl {
             font-size: 16px; } }
-      .u-thumTxtList1 > article .img {
-        overflow: hidden; }
-        .u-thumTxtList1 > article .img img {
-          transition: transform 0.3s; }
-      .u-thumTxtList1 > article:hover .img img {
-        transform: scale(1.1); }
       .u-thumTxtList1 > article .img {
         margin-bottom: 10px; }
         .u-thumTxtList1 > article .img img {
@@ -1416,7 +1464,7 @@ blockquote:before {
             font-size: 12px; } }
       .u-thumTxtList1 > article:nth-child(n + 5) {
         width: 23.5%; }
-      .u-thumTxtList1 > article:hover .entry-title ,
+      .u-thumTxtList1 > article:hover .entry-title,
       .u-thumTxtList1 > article:hover .ttl,
       .u-thumTxtList1 > article:hover p {
         opacity: 0.7; }
@@ -1469,7 +1517,7 @@ blockquote:before {
         .u-thumTxtList2 > ul > li .tags dl dt:after {
           content: "";
           display: block;
-          background: url(../img/bg_arw_r2.png) 0 0 no-repeat;
+          background: url(https://interior-yamashita.com/wp/wp-content/uploads/2018/09/bg_arw_r2.png) 0 0 no-repeat;
           background-size: 100% 100%;
           width: 0.9em;
           position: absolute;
@@ -1524,7 +1572,6 @@ blockquote:before {
           max-width: 100%;
           height: auto;
           transition: 0.3s; }
-
         .u-thumTxtList2 > ul > li .clkImgs a:hover img {
           transform: scale(1.1); }
     .u-thumTxtList2 > ul > li .btn {
@@ -1751,8 +1798,24 @@ blockquote:before {
   .u- .clamp2 {
     overflow: hidden; }
 
+/*--------------------------------------
+  トップページ
+---------------------------------------*/
+/*--------------------------------------
+  個別投稿
+---------------------------------------*/
+body.single .entry-title {
+  background-color: #136a64;
+  margin-bottom: 0;
+  padding: 0.6em 0 0.4em;
+  color: #fff;
+  font-size: 32px; }
+  @media screen and (max-width: 767px) {
+    body.single .entry-title {
+      font-size: 20px; } }
 
-
-
-
-
+/*--------------------------------------
+  固定ページ
+---------------------------------------*/
+body.page .entry-title {
+  display: none; }

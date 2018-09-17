@@ -17,7 +17,10 @@
 
 <?php wp_head(); ?>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-<link rel='stylesheet' id='sosimple-style-css'  href='https://interior-yamashita.com/wp/wp-content/themes/sosimple/my_style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='sosimple-style-css'  href='https://interior-yamashita.com/wp/wp-content/themes/sosimple/css/common.css' type='text/css' media='all' />
+<link rel='stylesheet' id='sosimple-style-css'  href='https://interior-yamashita.com/wp/wp-content/themes/sosimple/css/class.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://interior-yamashita.com/wp/wp-content/themes/sosimple/js/slick.min.js'></script>
+<script type='text/javascript' src='https://interior-yamashita.com/wp/wp-content/themes/sosimple/js/common.js'></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -53,9 +56,9 @@
 			<section class="hdRow2">
 				<div class="l-inner">
 					<nav class="u-nav1">
-						<span><a href="">ご挨拶</a></span>
-						<span><a href="">会社概要・沿革</a></span>
-						<span><a href="">事業内容・営業品目・取り扱いメーカー</a></span>
+						<span><a href="//interior-yamashita.com/message/">ご挨拶</a></span>
+						<span><a href="//interior-yamashita.com/about/">会社概要・沿革</a></span>
+						<span><a href="//interior-yamashita.com/company/">事業内容・営業品目・取り扱いメーカー</a></span>
 					</nav>
 				</div>
 			</section>
@@ -85,12 +88,13 @@
 							</nav>
 						</dd>
 					</dl>
-					<div class="btnMore"><a href="#"></a></div>
+<!--					<div class="btnMore"><a href="#"></a></div>-->
 				</div><!--/.l-inner-->
 			</section>
 		</div>
 	</header>
-<!--
+
+<?php if ( 1==2 ) : ?>
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<?php if ( function_exists( 'jetpack_the_site_logo' ) ) jetpack_the_site_logo(); ?>
@@ -113,7 +117,7 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav>
 	</header>
--->
+<?php endif; ?>
 
 
 

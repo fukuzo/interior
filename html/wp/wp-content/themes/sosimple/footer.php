@@ -11,6 +11,8 @@
 </div><!-- #content -->
 	<!-- Some more link css -->
 
+	<a class="l-toTop" href="#"></a>
+
 	<footer class="l-footer">
 		<section class="inqs">
 			<div class="l-inner">
@@ -36,24 +38,25 @@
 		<section class="infos">
 			<div class="l-inner">
 				<nav class="u-nav1">
-					<span><a href="">ご挨拶</a></span>
-					<span><a href="">会社概要・沿革</a></span>
-					<span><a href="">事業内容・営業品目・取り扱いメーカー</a></span>
+					<span><a href="//interior-yamashita.com/message/">ご挨拶</a></span>
+					<span><a href="//interior-yamashita.com/about/">会社概要・沿革</a></span>
+					<span><a href="//interior-yamashita.com/company/">事業内容・営業品目・取り扱いメーカー</a></span>
 				</nav>
 				<p id="copyright">copyright Interior Yamashita All rights reserved.</p>
 			</div><!--/.l-inner-->
 		</section>
 	</footer>
-<!--
+
+<?php if ( 1==2 ) : ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sosimple' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'sosimple' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
 			<?php $sosimple_theme = wp_get_theme(); ?>
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'sosimple' ), 'sosimple', '<a href="'.$sosimple_theme->get( 'AuthorURI' ).'" rel="designer">Fernando Villamor Jr.</a>' ); ?>
-		</div><!-- .site-info
-	</footer><!-- #colophon
--->
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+<?php endif; ?>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
