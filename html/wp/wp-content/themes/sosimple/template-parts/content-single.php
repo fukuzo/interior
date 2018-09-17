@@ -9,13 +9,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title"><div class="l-inner">', '</div></h1>' ); ?>
 
+		<?php if( 1==2 ) : ?>
 		<div class="entry-meta">
 			<?php sosimple_posted_on(); ?>
 		</div><!-- .entry-meta -->
+		<?php endif; ?>
 	</header><!-- .entry-header -->
-	<?php if ( has_post_thumbnail() ) : ?>
+	<?php if ( 1==2 && has_post_thumbnail() ) : ?>
 		<div class="entry-thumbnail">
 			<?php the_post_thumbnail( 'sosimple-featured' ); ?>
 		</div>
@@ -30,8 +32,10 @@
 		?>
 	</div><!-- .entry-content -->
 
+	<?php if( 1==2 ) : ?>
 	<footer class="entry-footer">
 		<?php sosimple_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+	<?php endif; ?>
 </article><!-- #post-## -->
 

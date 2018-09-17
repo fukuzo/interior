@@ -12,13 +12,18 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
+	<a class="u-fixBtnL1" href="#" onclick="history.back()">
+		<div><i class="fas fa-bars"></i></div>
+		<p>前へ戻る</p>
+	</a>
+
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
 			<?php the_post_navigation(); ?>
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
+				if ( 1==2 && comments_open() || get_comments_number() ) :
 					comments_template();
 				endif;
 			?>

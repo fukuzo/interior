@@ -8,10 +8,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<a href="<?php esc_url( the_permalink() ); ?>" rel="bookmark">
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+		<?php the_title( sprintf( '<h1 class="entry-title">' ), '</h1>' ); ?>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
+		<?php if ( 1==2 && 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php sosimple_posted_on(); ?>
 		</div><!-- .entry-meta -->
@@ -67,7 +68,8 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<!-- <footer class="entry-footer">
 		<?php sosimple_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer>.entry-footer -->
+	</a>
 </article><!-- #post-## -->
