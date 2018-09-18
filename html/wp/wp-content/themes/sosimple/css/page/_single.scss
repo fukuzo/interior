@@ -19,6 +19,16 @@ body.single{
 			font-size: 20px;
 		}
 	}
+	.entry-content{
+		& > .l-inner{
+			padding-top: 30px;
+			padding-bottom: 40px;
+			@include mq{
+				padding-top: 20px;
+				padding-bottom: 30px;
+			}
+		}
+	}
 }
 
 

@@ -1584,6 +1584,56 @@ blockquote:before {
       @media screen and (max-width: 767px) {
         .u-thumTxtList2 > ul > li .btn {
           margin: 15px 0 0; } }
+  .u-cateList1 > ul {
+    display: flex;
+    flex-wrap: wrap; }
+    .u-cateList1 > ul > li {
+      width: 32%;
+      margin: 10px 2% 0 0;
+      text-align: center; }
+      .u-cateList1 > ul > li:nth-child(3n) {
+        margin-right: 0; }
+      @media screen and (max-width: 767px) {
+        .u-cateList1 > ul > li {
+          width: 49%; }
+          .u-cateList1 > ul > li:nth-child(3n) {
+            margin-right: 2%; }
+          .u-cateList1 > ul > li:nth-child(2n) {
+            margin-right: 0; } }
+      .u-cateList1 > ul > li > a {
+        display: block;
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #ccc;
+        transition: opacity 0.3s; }
+        .u-cateList1 > ul > li > a:hover {
+          opacity: 0.7;
+          text-decoration: none; }
+  .u-tagList1 > ul {
+    display: flex;
+    flex-wrap: wrap; }
+    .u-tagList1 > ul > li {
+      width: 32%;
+      margin: 10px 2% 0 0;
+      text-align: center; }
+      .u-tagList1 > ul > li:nth-child(3n) {
+        margin-right: 0; }
+      @media screen and (max-width: 767px) {
+        .u-tagList1 > ul > li {
+          width: 49%; }
+          .u-tagList1 > ul > li:nth-child(3n) {
+            margin-right: 2%; }
+          .u-tagList1 > ul > li:nth-child(2n) {
+            margin-right: 0; } }
+      .u-tagList1 > ul > li > a {
+        display: block;
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #ccc;
+        transition: opacity 0.3s; }
+        .u-tagList1 > ul > li > a:hover {
+          opacity: 0.7;
+          text-decoration: none; }
   .u-tbl1 table {
     width: 100%;
     font-size: 14px; }
@@ -1753,7 +1803,7 @@ blockquote:before {
       .u-pager1 a.nxt {
         border-right: 1px solid #38a39d;
         transform: translateY(0.1em) rotate(-45deg); }
-    .u-pager1 .num {
+    .u-pager1 .num, .u-pager1 .page-numbers {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1762,9 +1812,21 @@ blockquote:before {
       height: 2em;
       color: #38a39d;
       border: 1px solid #38a39d; }
-      .u-pager1 .num.here {
+      .u-pager1 .num.here, .u-pager1 .num.current, .u-pager1 .page-numbers.here, .u-pager1 .page-numbers.current {
         background-color: #38a39d;
         color: #fff; }
+      .u-pager1 .num.prev, .u-pager1 .num.next, .u-pager1 .page-numbers.prev, .u-pager1 .page-numbers.next {
+        background-color: transparent;
+        width: 0.7em;
+        height: 0.7em;
+        border: none;
+        border-bottom: 1px solid #38a39d; }
+      .u-pager1 .num.prev, .u-pager1 .page-numbers.prev {
+        border-left: 1px solid #38a39d;
+        transform: translateY(0.1em) rotate(45deg); }
+      .u-pager1 .num.next, .u-pager1 .page-numbers.next {
+        border-right: 1px solid #38a39d;
+        transform: translateY(0.1em) rotate(-45deg); }
   .u-nav1 {
     display: flex;
     align-items: center;
@@ -1813,6 +1875,13 @@ body.single .entry-title {
   @media screen and (max-width: 767px) {
     body.single .entry-title {
       font-size: 20px; } }
+body.single .entry-content > .l-inner {
+  padding-top: 30px;
+  padding-bottom: 40px; }
+  @media screen and (max-width: 767px) {
+    body.single .entry-content > .l-inner {
+      padding-top: 20px;
+      padding-bottom: 30px; } }
 
 /*--------------------------------------
   固定ページ

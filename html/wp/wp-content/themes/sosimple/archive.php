@@ -9,6 +9,8 @@
 
 get_header(); ?>
 
+	<div class="l-container">
+	<div class="l-inner">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -16,10 +18,13 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					//the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_title( '<h1 class="u-ttl2">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
+
+			<section class="u-thumTxtList1">
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -35,8 +40,34 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; ?>
+				</section>
 
+			<?php if( 1==2 ): ?>
 			<?php the_posts_navigation(); ?>
+			<?php endif; ?>
+
+			<div class="u-pager1">
+				<?php global $wp_rewrite;
+				$paginate_base = get_pagenum_link(1);
+				if(strpos($paginate_base, '?') || ! $wp_rewrite->using_permalinks()){
+					$paginate_format = '';
+					$paginate_base = add_query_arg('paged','%#%');
+				}
+				else{
+					$paginate_format = (substr($paginate_base,-1,1) == '/' ? '' : '/') .
+					user_trailingslashit('page/%#%/','paged');;
+					$paginate_base .= '%_%';
+				}
+				echo paginate_links(array(
+					'base' => $paginate_base,
+					'format' => $paginate_format,
+					'total' => $wp_query->max_num_pages,
+					'mid_size' => 4,
+					'current' => ($paged ? $paged : 1),
+					'prev_text' => '',
+					'next_text' => '',
+				)); ?>
+			</div>
 
 		<?php else : ?>
 
@@ -46,6 +77,8 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	</div><!-- /.l-inner -->
+	</div><!-- /.l-container -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

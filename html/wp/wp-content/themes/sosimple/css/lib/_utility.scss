@@ -520,6 +520,54 @@
 			}
 		}
 	}
+	&cateList1{
+		> ul{
+			display: flex;
+			flex-wrap: wrap;
+			> li{
+				width: 32%;
+				margin: 10px 2% 0 0;
+				text-align: center;
+				&:nth-child(3n){margin-right: 0;}
+				@include mq{
+					width: 49%;
+					&:nth-child(3n){margin-right: 2%;}
+					&:nth-child(2n){margin-right: 0;}
+				}
+				> a{
+					display: block;
+					background-color: #fff;
+					padding: 10px;
+					border: 1px solid #ccc;
+					@include hvr;
+				}
+			}
+		}
+	}
+	&tagList1{
+		> ul{
+			display: flex;
+			flex-wrap: wrap;
+			> li{
+				width: 32%;
+				margin: 10px 2% 0 0;
+				text-align: center;
+				&:nth-child(3n){margin-right: 0;}
+				@include mq{
+					width: 49%;
+					&:nth-child(3n){margin-right: 2%;}
+					&:nth-child(2n){margin-right: 0;}
+				}
+				> a{
+					display: block;
+					background-color: #fff;
+					padding: 10px;
+					border: 1px solid #ccc;
+					@include hvr;
+				}
+			}
+		}
+	}
 
 	/* テーブル */
 	&tbl1{
@@ -747,7 +795,7 @@
 				transform: translateY(0.1em) rotate(-45deg);
 			}
 		}
-		.num{
+		.num,.page-numbers{
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -756,9 +804,25 @@
 			height: 2em;
 			color: $siteColor;
 			border: 1px solid $siteColor;
-			&.here{
+			&.here,&.current{
 				background-color: $siteColor;
 				color: #fff;
+			}
+			&.prev,
+			&.next{
+				background-color: transparent;
+				width: 0.7em;
+				height: 0.7em;
+				border: none;
+				border-bottom: 1px solid $siteColor;
+			}
+			&.prev{
+				border-left: 1px solid $siteColor;
+				transform: translateY(0.1em) rotate(45deg);
+			}
+			&.next{
+				border-right: 1px solid $siteColor;
+				transform: translateY(0.1em) rotate(-45deg);
 			}
 		}
 		@include mq{
