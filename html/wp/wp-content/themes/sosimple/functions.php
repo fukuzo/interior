@@ -250,3 +250,19 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+
+/*
+* the_archive_title 余計な文字を削除
+*/
+add_filter( 'get_the_archive_title', function ($title) {
+if ( is_category() ) {
+$title = single_cat_title( '施工事例：', false );
+} elseif ( is_tag() ) {
+$title = single_tag_title( '施工事例：', false );
+} elseif ( is_post_type_archive() ){
+$title = post_type_archive_title('', false );
+}
+return $title;
+});
+
+

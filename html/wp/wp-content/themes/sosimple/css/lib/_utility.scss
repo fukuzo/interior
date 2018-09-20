@@ -535,11 +535,32 @@
 					&:nth-child(2n){margin-right: 0;}
 				}
 				> a{
-					display: block;
+					display: flex;
+					align-items: center;
 					background-color: #fff;
-					padding: 10px;
+					padding: 5px;
 					border: 1px solid #ccc;
 					@include hvr;
+					@include mq{
+						display: block;
+					}
+					> div{
+						flex-shrink: 0;
+						width: 80px;
+						@include mq{
+							width: auto;
+						}
+						img{
+							width: 100%;
+							height: auto;
+						}
+					}
+					> p{
+						padding-left: 10px;
+						@include mq{
+							padding: 5px 0 0;
+						}
+					}
 				}
 			}
 		}
@@ -836,17 +857,26 @@
 		font-size: 14px;
 		span{
 			display: inline-block;
-			margin-right: 15px;
-			padding-right: 15px;
-			border-right: 1px solid #fff;
-			&:last-child{
-				margin-right: 0;
-				padding-right: 0;
-				border-right: none;
-			}
+			padding: 10px 0;
 			a{
+				padding: 0 15px;
 				&:hover{
 					text-decoration: underline;
+				}
+			}
+			+ span{
+				a{
+					border-left: 1px solid #fff;
+				}
+			}
+			&:last-child{
+				a{
+				}
+			}
+			.home &.navSeko{
+				background-color: $siteColor;
+				a{
+					border-left: none;
 				}
 			}
 		}

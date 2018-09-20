@@ -41,6 +41,7 @@
 					<span><a href="//interior-yamashita.com/message/">ご挨拶</a></span>
 					<span><a href="//interior-yamashita.com/about/">会社概要・沿革</a></span>
 					<span><a href="//interior-yamashita.com/company/">事業内容・営業品目・取り扱いメーカー</a></span>
+					<span class="navSeko"><a href="//interior-yamashita.com/">施工事例</a></span>
 				</nav>
 				<p id="copyright">copyright Interior Yamashita All rights reserved.</p>
 			</div><!--/.l-inner-->

@@ -15,7 +15,10 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			padding-top: 15px;
+			position: relative;
 			@include mq{
+				padding-top: 0;
 				position: relative;
 			}
 		}
@@ -27,6 +30,16 @@
 			}
 			@include mq{
 				width: 200px;
+			}
+		}
+		.siteDesc{
+			color: #666;
+			font-size: 14px;
+			position: absolute;
+			top: 3px;
+			left: 15px;
+			@include mq{
+				display: none;
 			}
 		}
 		.inqs{
@@ -91,11 +104,14 @@
 	}
 	.hdRow2{
 		background-color: $green1;
-		padding: 11px 0 9px;
+		padding: 0;
 		color: #fff;
 		border-bottom: 1px solid $green3;
 		@include mq{
 			padding: 10px 0 3px;
+		}
+		.home &{
+			border-bottom: none;
 		}
 	}
 	.hdRow3{
@@ -103,6 +119,9 @@
 		color: #fff;
 		border-bottom: 1px solid $green3;
 		@include mq{
+		}
+		.home &{
+			background-color: $siteColor;
 		}
 		.l-inner{
 			display: flex;
@@ -127,7 +146,8 @@
 				dt{
 					display: flex;
 					align-items: center;
-					background-color: #0d4a45;
+//					background-color: #0d4a45;
+					background-color: rgba(0,0,0,0.32);
 					margin-right: 1.5em;
 					padding: 0.5em 0.8em;
 					line-height: 1;

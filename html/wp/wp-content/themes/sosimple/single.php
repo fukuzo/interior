@@ -26,12 +26,16 @@ get_header(); ?>
 <?php endif; ?>
 
 		<div class="l-inner">
-			<p class="wpCate"><?php
-				$category = get_the_category();
-				$cat_name = $category[0]->name;
-				echo $cat_name;
-				?></p>
-			<p class="wpTags"><?php the_tags(); ?></p>
+			<div class="thisPageCateTag">
+				<div class="wpCate"><span>カテゴリー</span><?php
+					$cat = get_the_category();
+					$catName = $cat[0]->name;
+					$catId = $cat[0]->cat_ID;
+					$catlink = get_category_link($catId);
+					echo '<ul><li><a href="' . $catlink . '">' . $catName . '</a></li></ul>';
+					?></div>
+				<div class="wpTags"><?php the_tags("<span>タグ</span><ul><li>","</li><li>","</li></ul>"); ?></div>
+			</div>
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template.
@@ -42,9 +46,16 @@ get_header(); ?>
 
 			<h2 class="u-ttl2 c-MT50 c_sp-MT30">カテゴリー</h2>
 			<section class="u-cateList1">
-				<ul>
-					<?php wp_list_categories('title_li='); ?>
-				</ul>
+				<?php
+					$terms = get_the_category();
+					if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+						echo '<ul>';
+							foreach ( $terms as $term ) {
+								echo '<li><a href="/category' . $taxonomy . '/' . $term->slug . '"><div>' . get_term_thumbnail( $term->term_taxonomy_id, $size = 'category-thumb', $attr = '' ) . '</div><p>' . $term->name . '</p></a></li>';
+						}
+						echo '</ul>';
+					}
+				?>
 			</section>
 
 			<h2 class="u-ttl2 c-MT50 c_sp-MT30">タグ</h2>

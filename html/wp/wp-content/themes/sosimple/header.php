@@ -30,7 +30,8 @@
 	<header class="l-header">
 		<section class="hdRow1">
 			<div class="l-inner">
-				<h1><a href="/"><img src="https://interior-yamashita.com/wp/wp-content/uploads/2018/09/logo.png" alt=""></a></h1>
+				<h1><a href="/"><img src="https://interior-yamashita.com/wp/wp-content/uploads/2018/09/logo.png" alt="インテリア山下"></a></h1>
+				<small class="siteDesc">新潟市のインテリア小売店舗と内装仕上げ工事のパイオニア</small>
 
 				<div class="inqs">
 					<div class="tels">
@@ -59,6 +60,7 @@
 						<span><a href="//interior-yamashita.com/message/">ご挨拶</a></span>
 						<span><a href="//interior-yamashita.com/about/">会社概要・沿革</a></span>
 						<span><a href="//interior-yamashita.com/company/">事業内容・営業品目・取り扱いメーカー</a></span>
+						<span class="navSeko"><a href="//interior-yamashita.com/">施工事例</a></span>
 					</nav>
 				</div>
 			</section>
@@ -69,10 +71,9 @@
 						<dt><i class="fas fa-search"></i>業種別で見る</dt>
 						<dd>
 							<nav>
-								<span><a href="#">すべて</a></span>
-								<span><a href="#">学校</a></span>
-								<span><a href="#">公共機関</a></span>
-								<span><a href="#">店舗</a></span>
+								<span><a href="//interior-yamashita.com/category/%e5%8c%bb%e7%99%82%e6%96%bd%e8%a8%ad">医療施設</a></span>
+								<span><a href="//interior-yamashita.com/category/%e5%b8%82%e6%b0%91%e4%bc%9a%e9%a4%a8">市民会館</a></span>
+								<span><a href="//interior-yamashita.com/category/%e6%96%87%e5%8c%96%e6%96%bd%e8%a8%ad">文化施設</a></span>
 							</nav>
 						</dd>
 					</dl>
@@ -80,11 +81,10 @@
 						<dt><i class="fas fa-search"></i>内容別で見る</dt>
 						<dd>
 							<nav>
-								<span><a href="#">すべて</a></span>
-								<span><a href="#">カーテン</a></span>
-								<span><a href="#">椅子</a></span>
-								<span><a href="#">ブラインド</a></span>
-								<span><a href="#">そのほか</a></span>
+								<span><a href="//interior-yamashita.com/tag/%e3%82%ab%e3%83%bc%e3%83%86%e3%83%b3/">カーテン</a></span>
+								<span><a href="//interior-yamashita.com/tag/%e3%83%96%e3%83%a9%e3%82%a4%e3%83%b3%e3%83%89/">ブラインド</a></span>
+								<span><a href="//interior-yamashita.com/tag/%e5%86%85%e8%a3%85%e5%b7%a5%e4%ba%8b/">内装工事</a></span>
+								<span><a href="//interior-yamashita.com/tag/%e9%80%a0%e4%bd%9c%e5%ae%b6%e5%85%b7/">造作家具</a></span>
 							</nav>
 						</dd>
 					</dl>
