@@ -1869,6 +1869,7 @@ blockquote:before {
       display: inline-block;
       padding: 10px 0; }
       .u-nav1 span a {
+        display: block;
         padding: 0 15px; }
         .u-nav1 span a:hover {
           text-decoration: underline; }
@@ -1886,11 +1887,11 @@ blockquote:before {
         text-align: center; }
         .u-nav1 span {
           display: block;
-          margin-right: 0;
-          padding-right: 0;
-          border-right: none; }
-          .u-nav1 span + span {
-            margin-top: 5px; } }
+          padding: 0; }
+          .u-nav1 span a {
+            padding: 5px; }
+          .u-nav1 span + span a {
+            border-left: none; } }
   .u- .clamp {
     overflow: hidden; }
   .u- .clamp2 {
