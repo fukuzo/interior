@@ -30,7 +30,7 @@
 	<header class="l-header">
 		<section class="hdRow1">
 			<div class="l-inner">
-				<h1><a href="/"><img src="https://interior-yamashita.com/wp/wp-content/uploads/2018/09/logo.png" alt="インテリア山下"></a></h1>
+				<h1><a href="/"><img src="https://interior-yamashita.com/wp/wp-content/uploads/2018/09/logo.svg	" alt="インテリア山下"></a></h1>
 				<small class="siteDesc">新潟市のインテリア小売店舗と内装仕上げ工事のパイオニア</small>
 
 				<div class="inqs">
@@ -71,9 +71,9 @@
 						<dt><i class="fas fa-search"></i>業種別で見る</dt>
 						<dd>
 							<nav>
-								<span><a href="//interior-yamashita.com/category/%e5%8c%bb%e7%99%82%e6%96%bd%e8%a8%ad">医療施設</a></span>
-								<span><a href="//interior-yamashita.com/category/%e5%b8%82%e6%b0%91%e4%bc%9a%e9%a4%a8">市民会館</a></span>
-								<span><a href="//interior-yamashita.com/category/%e6%96%87%e5%8c%96%e6%96%bd%e8%a8%ad">文化施設</a></span>
+								<span><a href="//interior-yamashita.com/category/medical_facilities">医療施設</a></span>
+								<span><a href="//interior-yamashita.com/category/civic_hall">市民会館</a></span>
+								<span><a href="//interior-yamashita.com/category/cultural_facilities">文化施設</a></span>
 							</nav>
 						</dd>
 					</dl>
@@ -81,10 +81,10 @@
 						<dt><i class="fas fa-search"></i>内容別で見る</dt>
 						<dd>
 							<nav>
-								<span><a href="//interior-yamashita.com/tag/%e3%82%ab%e3%83%bc%e3%83%86%e3%83%b3/">カーテン</a></span>
-								<span><a href="//interior-yamashita.com/tag/%e3%83%96%e3%83%a9%e3%82%a4%e3%83%b3%e3%83%89/">ブラインド</a></span>
-								<span><a href="//interior-yamashita.com/tag/%e5%86%85%e8%a3%85%e5%b7%a5%e4%ba%8b/">内装工事</a></span>
-								<span><a href="//interior-yamashita.com/tag/%e9%80%a0%e4%bd%9c%e5%ae%b6%e5%85%b7/">造作家具</a></span>
+								<span><a href="//interior-yamashita.com/tag/curtain/">カーテン</a></span>
+								<span><a href="//interior-yamashita.com/tag/blind/">ブラインド</a></span>
+								<span><a href="//interior-yamashita.com/tag/interior_work/">内装工事</a></span>
+								<span><a href="//interior-yamashita.com/tag/furnishings/">造作家具</a></span>
 							</nav>
 						</dd>
 					</dl>

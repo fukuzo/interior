@@ -905,14 +905,15 @@ blockquote:before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 15px;
+    padding-top: 30px;
     position: relative; }
     @media screen and (max-width: 767px) {
       .l-header .hdRow1 .l-inner {
         padding-top: 0;
         position: relative; } }
   .l-header .hdRow1 h1 {
-    width: 232px; }
+    width: 232px;
+    padding-bottom: 10px; }
     .l-header .hdRow1 h1 a {
       display: block;
       transition: opacity 0.3s; }
@@ -921,7 +922,8 @@ blockquote:before {
         text-decoration: none; }
     @media screen and (max-width: 767px) {
       .l-header .hdRow1 h1 {
-        width: 200px; } }
+        width: 200px;
+        padding-top: 10px; } }
   .l-header .hdRow1 .siteDesc {
     color: #666;
     font-size: 14px;
