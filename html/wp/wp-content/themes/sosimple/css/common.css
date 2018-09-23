@@ -1921,6 +1921,45 @@ body.single .entry-content > .l-inner {
     body.single .entry-content > .l-inner {
       padding-top: 20px;
       padding-bottom: 30px; } }
+body.single .thisPageCateTag .wpCate,
+body.single .thisPageCateTag .wpTags {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  font-size: 14px; }
+  body.single .thisPageCateTag .wpCate > span,
+  body.single .thisPageCateTag .wpTags > span {
+    align-self: flex-start;
+    background-color: #0d4844;
+    margin-right: 1.5em;
+    padding: 0.5em 0.5em 0.5em 0.8em;
+    color: #fff;
+    line-height: 1;
+    white-space: nowrap;
+    position: relative; }
+    body.single .thisPageCateTag .wpCate > span:after,
+    body.single .thisPageCateTag .wpTags > span:after {
+      content: "";
+      background: url(https://interior-yamashita.com/wp/wp-content/uploads/2018/09/bg_arw_r3.png) 0 0 no-repeat;
+      background-size: 100% 100%;
+      width: 1em;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -1em; }
+  body.single .thisPageCateTag .wpCate > ul,
+  body.single .thisPageCateTag .wpTags > ul {
+    display: flex;
+    flex-wrap: wrap; }
+    body.single .thisPageCateTag .wpCate > ul > li:after,
+    body.single .thisPageCateTag .wpTags > ul > li:after {
+      content: ","; }
+    body.single .thisPageCateTag .wpCate > ul > li:last-child:after,
+    body.single .thisPageCateTag .wpTags > ul > li:last-child:after {
+      content: normal; }
+    body.single .thisPageCateTag .wpCate > ul > li a,
+    body.single .thisPageCateTag .wpTags > ul > li a {
+      display: inline-block; }
 
 /*--------------------------------------
   固定ページ

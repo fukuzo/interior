@@ -27,13 +27,7 @@ get_header(); ?>
 
 		<div class="l-inner">
 			<div class="thisPageCateTag">
-				<div class="wpCate"><span>カテゴリー</span><?php
-					$cat = get_the_category();
-					$catName = $cat[0]->name;
-					$catId = $cat[0]->cat_ID;
-					$catlink = get_category_link($catId);
-					echo '<ul><li><a href="' . $catlink . '">' . $catName . '</a></li></ul>';
-					?></div>
+				<div class="wpCate"><span>カテゴリー</span><?php the_category(); ?></div>
 				<div class="wpTags"><?php the_tags("<span>タグ</span><ul><li>","</li><li>","</li></ul>"); ?></div>
 			</div>
 
@@ -47,7 +41,7 @@ get_header(); ?>
 			<h2 class="u-ttl2 c-MT50 c_sp-MT30">カテゴリー</h2>
 			<section class="u-cateList1">
 				<?php
-					$terms = get_the_category();
+					$terms = get_categories();
 					if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
 						echo '<ul>';
 							foreach ( $terms as $term ) {
