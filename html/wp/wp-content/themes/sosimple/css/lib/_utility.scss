@@ -520,6 +520,185 @@
 			}
 		}
 	}
+	&postList1{
+		.u-txt1,
+		.u-tbl2{
+			display: none;
+		}
+		> ul{
+			> li{
+				background-color: #ecf0f1;
+				padding: 35px 0;
+				&:nth-child(even){
+					background-color: #f7f9f8;
+				}
+				@include mq{
+					padding: 15px 0 20px;
+				}
+				> .l-inner{
+					position: relative;
+					@include mq{
+						display: flex;
+						flex-direction: column;
+					}
+					.l-inner{
+						padding: 0;
+					}
+				}
+				.showImg{
+					width: 276px;
+					border: 1px solid #38a39d;
+					float: left;
+					@include mq{
+						order:2;
+						width: auto;
+						float: none;
+					}
+					img{
+						width: 100%;
+					}
+				}
+				.u-ttl2,
+				.u-tags1,
+				.u-thumList1{
+					margin-left: 300px;
+					margin-right: 0;
+					clear: none;
+					@include mq{
+						margin-left: 0;
+					}
+				}
+				.u-ttl2{
+					margin-bottom: 0.4em;
+					@include mq{
+						order:0;
+					}
+				}
+				.u-tags1{
+					background-color: transparent;
+					@include mq{
+						order:1;
+						width: auto;
+						padding-bottom: 15px;
+					}
+					.l-inner{
+						display: block;
+					}
+					dl{
+						display: flex;
+						align-items: center;
+						+ dl{
+							margin-top: 10px;
+							margin-left: 0;
+							padding-top: 10px;
+							border-top: 1px dotted $green2;
+						}
+						@include mq{
+							display: block;
+						}
+						dt{
+							background-color: $green2;
+							margin-right: 0.9em;
+							width: 80px;
+							padding: 0.3em 0 0.1em;
+							color: $green1;
+							font-size: 14px;
+							text-align: center;
+							position: relative;
+							&:after {
+								content: "";
+								display: block;
+								background: url(https://interior-yamashita.com/wp/wp-content/uploads/2018/09/bg_arw_r2.png) 0 0 no-repeat;
+								background-size: 100% 100%;
+								width: 0.9em;
+								position: absolute;
+								top: 0;
+								bottom: 0;
+								right: -0.9em;
+							}
+							@include mq{
+								width: auto;
+								margin-right: 0;
+								font-size: 13px;
+								&:after{
+									content: normal;
+								}
+							}
+						}
+						dd{
+							padding-left: 0.8em;
+							color: inherit;
+							font-size: 13px;
+							@include mq{
+								padding: 0.5em 0 0;
+								font-size: 12px;
+							}
+						}
+					}
+				}
+				.u-tags1 + .l-inner{
+					@include mq{
+						order:3;
+					}
+				}
+				.u-thumList1{
+					width: 35%;
+					margin-top: 15px;
+					padding-bottom: 0;
+					@include mq{
+						width: auto;
+					}
+					> ul{
+						@include mq{
+						}
+						> li{
+							margin-bottom: 0;
+							overflow: hidden;
+							&:nth-child(n + 4){
+								display: none;
+							}
+							@include mq{
+								width: 30%;
+							}
+							&.show{
+								border-color: $orange1;
+							}
+							img{
+								transition: 0.3s;
+							}
+							&:hover{
+								img{
+									transform: scale(1.1);
+								}
+							}
+						}
+					}
+				}
+				.btn{
+					width: 28%;
+					margin-left: 35%;
+					position: absolute;
+					bottom: 0;
+					left: 315px;
+					a{
+						display: block;
+						.txt{
+							padding-top: 0;
+						}
+					}
+					@include mq{
+						order:5;
+						width: auto;
+						margin: 15px 0 0;
+						position: static;
+						a{
+						}
+					}
+				}
+			}
+		}
+	
+	}
 	&cateList1{
 		> ul{
 			display: flex;

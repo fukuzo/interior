@@ -1602,6 +1602,146 @@ blockquote:before {
       @media screen and (max-width: 767px) {
         .u-thumTxtList2 > ul > li .btn {
           margin: 15px 0 0; } }
+  .u-postList1 .u-txt1,
+  .u-postList1 .u-tbl2 {
+    display: none; }
+  .u-postList1 > ul > li {
+    background-color: #ecf0f1;
+    padding: 35px 0; }
+    .u-postList1 > ul > li:nth-child(even) {
+      background-color: #f7f9f8; }
+    @media screen and (max-width: 767px) {
+      .u-postList1 > ul > li {
+        padding: 15px 0 20px; } }
+    .u-postList1 > ul > li > .l-inner {
+      position: relative; }
+      @media screen and (max-width: 767px) {
+        .u-postList1 > ul > li > .l-inner {
+          display: flex;
+          flex-direction: column; } }
+      .u-postList1 > ul > li > .l-inner .l-inner {
+        padding: 0; }
+    .u-postList1 > ul > li .showImg {
+      width: 276px;
+      border: 1px solid #38a39d;
+      float: left; }
+      @media screen and (max-width: 767px) {
+        .u-postList1 > ul > li .showImg {
+          order: 2;
+          width: auto;
+          float: none; } }
+      .u-postList1 > ul > li .showImg img {
+        width: 100%; }
+    .u-postList1 > ul > li .u-ttl2,
+    .u-postList1 > ul > li .u-tags1,
+    .u-postList1 > ul > li .u-thumList1 {
+      margin-left: 300px;
+      margin-right: 0;
+      clear: none; }
+      @media screen and (max-width: 767px) {
+        .u-postList1 > ul > li .u-ttl2,
+        .u-postList1 > ul > li .u-tags1,
+        .u-postList1 > ul > li .u-thumList1 {
+          margin-left: 0; } }
+    .u-postList1 > ul > li .u-ttl2 {
+      margin-bottom: 0.4em; }
+      @media screen and (max-width: 767px) {
+        .u-postList1 > ul > li .u-ttl2 {
+          order: 0; } }
+    .u-postList1 > ul > li .u-tags1 {
+      background-color: transparent; }
+      @media screen and (max-width: 767px) {
+        .u-postList1 > ul > li .u-tags1 {
+          order: 1;
+          width: auto;
+          padding-bottom: 15px; } }
+      .u-postList1 > ul > li .u-tags1 .l-inner {
+        display: block; }
+      .u-postList1 > ul > li .u-tags1 dl {
+        display: flex;
+        align-items: center; }
+        .u-postList1 > ul > li .u-tags1 dl + dl {
+          margin-top: 10px;
+          margin-left: 0;
+          padding-top: 10px;
+          border-top: 1px dotted #9dd1cf; }
+        @media screen and (max-width: 767px) {
+          .u-postList1 > ul > li .u-tags1 dl {
+            display: block; } }
+        .u-postList1 > ul > li .u-tags1 dl dt {
+          background-color: #9dd1cf;
+          margin-right: 0.9em;
+          width: 80px;
+          padding: 0.3em 0 0.1em;
+          color: #136a64;
+          font-size: 14px;
+          text-align: center;
+          position: relative; }
+          .u-postList1 > ul > li .u-tags1 dl dt:after {
+            content: "";
+            display: block;
+            background: url(https://interior-yamashita.com/wp/wp-content/uploads/2018/09/bg_arw_r2.png) 0 0 no-repeat;
+            background-size: 100% 100%;
+            width: 0.9em;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -0.9em; }
+          @media screen and (max-width: 767px) {
+            .u-postList1 > ul > li .u-tags1 dl dt {
+              width: auto;
+              margin-right: 0;
+              font-size: 13px; }
+              .u-postList1 > ul > li .u-tags1 dl dt:after {
+                content: normal; } }
+        .u-postList1 > ul > li .u-tags1 dl dd {
+          padding-left: 0.8em;
+          color: inherit;
+          font-size: 13px; }
+          @media screen and (max-width: 767px) {
+            .u-postList1 > ul > li .u-tags1 dl dd {
+              padding: 0.5em 0 0;
+              font-size: 12px; } }
+    @media screen and (max-width: 767px) {
+      .u-postList1 > ul > li .u-tags1 + .l-inner {
+        order: 3; } }
+    .u-postList1 > ul > li .u-thumList1 {
+      width: 35%;
+      margin-top: 15px;
+      padding-bottom: 0; }
+      @media screen and (max-width: 767px) {
+        .u-postList1 > ul > li .u-thumList1 {
+          width: auto; } }
+      .u-postList1 > ul > li .u-thumList1 > ul > li {
+        margin-bottom: 0;
+        overflow: hidden; }
+        .u-postList1 > ul > li .u-thumList1 > ul > li:nth-child(n + 4) {
+          display: none; }
+        @media screen and (max-width: 767px) {
+          .u-postList1 > ul > li .u-thumList1 > ul > li {
+            width: 30%; } }
+        .u-postList1 > ul > li .u-thumList1 > ul > li.show {
+          border-color: #ff8c01; }
+        .u-postList1 > ul > li .u-thumList1 > ul > li img {
+          transition: 0.3s; }
+        .u-postList1 > ul > li .u-thumList1 > ul > li:hover img {
+          transform: scale(1.1); }
+    .u-postList1 > ul > li .btn {
+      width: 28%;
+      margin-left: 35%;
+      position: absolute;
+      bottom: 0;
+      left: 315px; }
+      .u-postList1 > ul > li .btn a {
+        display: block; }
+        .u-postList1 > ul > li .btn a .txt {
+          padding-top: 0; }
+      @media screen and (max-width: 767px) {
+        .u-postList1 > ul > li .btn {
+          order: 5;
+          width: auto;
+          margin: 15px 0 0;
+          position: static; } }
   .u-cateList1 > ul {
     display: flex;
     flex-wrap: wrap; }

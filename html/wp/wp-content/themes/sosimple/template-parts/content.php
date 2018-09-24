@@ -68,8 +68,10 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<!-- <footer class="entry-footer">
+<?php if ( 1==2 ) : ?>
+	<footer class="entry-footer">
 		<?php sosimple_entry_footer(); ?>
-	</footer>.entry-footer -->
+	</footer><!-- .entry-footer -->
+<?php endif; ?>
 	</a>
 </article><!-- #post-## -->

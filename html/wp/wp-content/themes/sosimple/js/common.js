@@ -35,7 +35,7 @@ $(".spNavBtn").click(function(){
 });
 
 
-//詳細2のthumb
+/*----- 詳細2のthumb -----*/
 $(".u-thumTxtList2 .clkImgs a").click(function(){
 	if($(this).hasClass("show")){
 		return false;
@@ -48,6 +48,29 @@ $(".u-thumTxtList2 .clkImgs a").click(function(){
 		return false;
 	}
 });
+//wordpress用
+$(".u-postList1 .liItem").each(function(){
+	//showImgの設定
+	var thisFstImg = $(this).find(".u-thumList1 li:eq(0) img").clone();
+	$(".showImg", this).append(thisFstImg);
+
+	//thumbsの1つ目をshowに
+	$(this).find(".u-thumList1 li:eq(0)").addClass("show");
+});
+
+$(".u-postList1 .u-thumList1 li").click(function(){
+	if($(this).hasClass("show")){
+		return false;
+	}else{
+		var thisBox = $(this).parents(".liItem");
+		var thisImg = $(this).find("img").attr("src");
+		thisBox.find(".showImg img").attr("src", thisImg);
+		thisBox.find(".u-thumList1 li").removeClass("show");
+		$(this).addClass("show");
+		return false;
+	}
+});
+/*----- /詳細2のthumb -----*/
 
 
 //topへ戻るボタン
