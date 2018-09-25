@@ -11,74 +11,58 @@
  */
 
 get_header(); ?>
+<h2 style="font-size: 30px;">page-test.php</h2>
+	<div class="l-container">
+	<div class="l-inner">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-<p>ページャーテスト</p>
 
-		<?php if ( have_posts() ) : ?>
+	<?php
+	$paged = get_query_var('paged', 1);
+	$myposts = new WP_Query(
+		array(
+			'paged' => $paged,
+			'numberposts' => 0,
+			'posts_per_page' => 4
+		)
+	);
+	?>
 
-<div class="pager_test">
+	<?php if($myposts->have_posts()): ?>
+		<section class="u-thumTxtList1">
+			<ul>
+				<?php while($myposts->have_posts()) : $myposts->the_post() ;?>
+				<li style="border-bottom:solid 1px #f00;padding:10px 0;">
+					<?php the_title(); ?>
+		<div class="seko">
+			<?php echo post_custom('施工年'); ?>
+		</div>
+		<div class="aaa">
+			<?php echo the_meta('値'); ?>
+		</div>
+				</li>
+				<?php endwhile; ?>
+			</ul>
+		</section>
+		<?php wp_pageNavi(array('query' => $myposts)); ?>
+	<?php else : ?>
 
-<section	>
+		<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php
-					global $post;
-					$args = array( 'posts_per_page' => 4 );
-					$myposts = get_posts( $args );
-					foreach( $myposts as $post ) {
-						setup_postdata($post);
-				?>
-				<h5><?php the_title() ?></h5>
-				<?php } wp_reset_postdata(); ?>
-				</section>
+	<?php endif; wp_reset_postdata(); ?>
 
-<!--
-	上記はpage-list.phpから
-	下記はindex.phpから
-	固定ページにて投稿数を下記ページャーに渡せない？
-	或いは他の方法が必要
--->
+
 
 
 			<div class="u-pager1">
-				<?php global $wp_rewrite;
-				$paginate_base = get_pagenum_link(1);
-				if(strpos($paginate_base, '?') || ! $wp_rewrite->using_permalinks()){
-					$paginate_format = '';
-					$paginate_base = add_query_arg('paged','%#%');
-				}
-				else{
-					$paginate_format = (substr($paginate_base,-1,1) == '/' ? '' : '/') .
-					user_trailingslashit('page/%#%/','paged');;
-					$paginate_base .= '%_%';
-				}
-				echo paginate_links(array(
-					'base' => $paginate_base,
-					'format' => $paginate_format,
-					'total' => $wp_query->max_num_pages,
-					'mid_size' => 4,
-					'current' => ($paged ? $paged : 1),
-					'prev_text' => '',
-					'next_text' => '',
-				)); ?>
+				
 			</div>
 
 
-
-
-
-</div>
-
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	</div><!-- /.l-inner -->
+	</div><!-- /.l-container -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
