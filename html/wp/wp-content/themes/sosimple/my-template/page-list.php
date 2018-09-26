@@ -11,69 +11,66 @@
  */
 
 get_header(); ?>
-<!--<p>リストテンプレ</p>-->
 	<div id="primary" class="content-area">
+	<div class="l-container">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
-			<section class="u-postList1">
-				<ul>
-				<?php
-					global $post;
-					$args = array( 'posts_per_page' => 4 );
-					$myposts = get_posts( $args );
-					foreach( $myposts as $post ) {
-						setup_postdata($post);
-				?>
-				<li class="liItem">
+	<?php
+	$paged = get_query_var('paged', 1);
+	$myposts = new WP_Query(
+		array(
+			'paged' => $paged,
+			'numberposts' => 0,
+			'posts_per_page' => 4
+		)
+	);
+	?>
+
+	<?php if($myposts->have_posts()): ?>
+		<section class="u-thumTxtList2">
+			<ul>
+				<?php while($myposts->have_posts()) : $myposts->the_post() ;?>
+				<li>
 					<div class="l-inner clearfix">
-						<div class="showImg"></div>
-						<h2 class="u-ttl2"><?php the_title(); ?></h2>
-						<?php remove_filter('the_content', 'wpautop'); ?>
-						<?php the_content(); ?>
-						<div class="btn">
-							<a class="u-btn withArwR1 type3 clr1" href="<?php the_permalink() ?>"><span class="txt">詳細を見る</span></a>
+						<div class="colR">
+							<h2 class="u-ttl2"><?php the_title(); ?></h2>
+							<div class="tags">
+								<dl>
+									<dt>施行年</dt>
+									<dd><?php the_field('sekonen'); ?></dd>
+								</dl>
+								<dl>
+									<dt>施行内容</dt>
+									<dd><?php the_field('sekonaiyo'); ?></dd>
+								</dl>
+							</div>
+						</div>
+						<div class="showImg colL"><img src="<?php the_field('detailimg_1'); ?>" alt=""></div>
+						<div class="thum_btn colR">
+							<div class="clkImgs">
+								<a class="show" href=""><img src="<?php the_field('detailimg_1'); ?>" alt=""></a>
+								<a href=""><img src="<?php the_field('detailimg_2'); ?>" alt=""></a>
+								<a href=""><img src="<?php the_field('detailimg_3'); ?>" alt=""></a>
+							</div>
+							<div class="btn">
+								<a class="u-btn withArwR1 type3 clr1" href="<?php the_permalink(); ?>"><span class="txt">詳細を見る</span></a>
+							</div>
 						</div>
 					</div>
 				</li>
-				<?php
-				}
-				wp_reset_postdata();
-				?>
-				</ul>
-			</section>
+				<?php endwhile; ?>
+			</ul>
+		</section>
 
+		<?php wp_pageNavi(array('query' => $myposts)); ?>
+	<?php else : ?>
 
-			<div class="u-pager1">
-				<?php global $wp_rewrite;
-				$paginate_base = get_pagenum_link(1);
-				if(strpos($paginate_base, '?') || ! $wp_rewrite->using_permalinks()){
-					$paginate_format = '';
-					$paginate_base = add_query_arg('paged','%#%');
-				}
-				else{
-					$paginate_format = (substr($paginate_base,-1,1) == '/' ? '' : '/') .
-					user_trailingslashit('page/%#%/','paged');;
-					$paginate_base .= '%_%';
-				}
-				echo paginate_links(array(
-					'base' => $paginate_base,
-					'format' => $paginate_format,
-					'total' => $wp_query->max_num_pages,
-					'mid_size' => 4,
-					'current' => ($paged ? $paged : 1),
-					'prev_text' => '',
-					'next_text' => '',
-				)); ?>
-			</div>
+		<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
+	<?php endif; wp_reset_postdata(); ?>
 
 		</main><!-- #main -->
+	</div><!-- /.l-container -->
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>

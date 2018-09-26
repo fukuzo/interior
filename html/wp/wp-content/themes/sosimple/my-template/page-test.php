@@ -35,10 +35,10 @@ get_header(); ?>
 				<li style="border-bottom:solid 1px #f00;padding:10px 0;">
 					<?php the_title(); ?>
 		<div class="seko">
-			<?php echo post_custom('施工年'); ?>
+			<?php the_field('sekonen'); ?>
 		</div>
 		<div class="aaa">
-			<?php echo the_meta('値'); ?>
+			<?php echo the_field('detailimg_1'); ?>
 		</div>
 				</li>
 				<?php endwhile; ?>

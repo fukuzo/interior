@@ -270,12 +270,15 @@
 		padding-bottom: 5px;
 		> ul{
 			display: flex;
-			justify-content: space-between;
+			align-items: center;
 			flex-wrap: wrap;
 			> li{
-				width: percentage(295/926);
-				margin-bottom: 2%;
+				width: 30%;
+				margin: 0 5% 2% 0;
 				border: 1px solid $green2;
+				&:nth-child(3n){
+					margin-right: 0;
+				}
 				img{
 					width: 100%;
 					height: auto;
@@ -287,6 +290,13 @@
 			> ul{
 				> li{
 					width: 49%;
+					margin-right: 2%;
+					&:nth-child(3n){
+						margin-right: 2%;
+					}
+					&:nth-child(even){
+						margin-right: 0;
+					}
 				}
 			}
 		}
@@ -469,7 +479,7 @@
 				.clkImgs{
 					margin-top: 15px;
 					display: flex;
-					align-items: flex-start;
+					align-items: flex-end;
 					@include mq{
 					}
 					a{
