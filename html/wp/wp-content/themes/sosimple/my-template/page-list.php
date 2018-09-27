@@ -62,7 +62,14 @@ get_header(); ?>
 			</ul>
 		</section>
 
-		<?php wp_pageNavi(array('query' => $myposts)); ?>
+		<div class="l-inner c-PB40 c_sp-PB30">
+			<?php wp_pageNavi(
+				array(
+					'query' => $myposts,
+					'wrapper_class' => 'u-pager1'
+				)
+			); ?>
+		</div>
 	<?php else : ?>
 
 		<?php get_template_part( 'template-parts/content', 'none' ); ?>

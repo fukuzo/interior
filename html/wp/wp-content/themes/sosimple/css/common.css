@@ -2010,6 +2010,41 @@ blockquote:before {
       .u-pager1 .num.next, .u-pager1 .page-numbers.next {
         border-right: 1px solid #38a39d;
         transform: translateY(0.1em) rotate(-45deg); }
+    .u-pager1 .pages {
+      display: none; }
+    .u-pager1 .page {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      width: 2em;
+      height: 2em;
+      color: #38a39d;
+      border: 1px solid #38a39d; }
+    .u-pager1 .current[aria-current] {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #38a39d;
+      width: 2em;
+      height: 2em;
+      color: #fff;
+      border: 1px solid #38a39d; }
+    .u-pager1 .previouspostslink,
+    .u-pager1 .nextpostslink {
+      background-color: transparent;
+      width: 0.7em;
+      height: 0.7em;
+      border: none;
+      text-indent: -9999px;
+      border-bottom: 1px solid #38a39d;
+      overflow: hidden; }
+    .u-pager1 .previouspostslink {
+      border-left: 1px solid #38a39d;
+      transform: translateY(0.1em) rotate(45deg); }
+    .u-pager1 .nextpostslink {
+      border-right: 1px solid #38a39d;
+      transform: translateY(0.1em) rotate(-45deg); }
   .u-nav1 {
     display: flex;
     align-items: center;

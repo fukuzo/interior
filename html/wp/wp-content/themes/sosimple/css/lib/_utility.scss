@@ -1035,6 +1035,47 @@
 				transform: translateY(0.1em) rotate(-45deg);
 			}
 		}
+		.pages{
+			display: none;
+		}
+		.page{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #fff;
+			width: 2em;
+			height: 2em;
+			color: $siteColor;
+			border: 1px solid $siteColor;
+		}
+		.current[aria-current]{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: $siteColor;
+			width: 2em;
+			height: 2em;
+			color: #fff;
+			border: 1px solid $siteColor;
+		}
+		.previouspostslink,
+		.nextpostslink{
+			background-color: transparent;
+			width: 0.7em;
+			height: 0.7em;
+			border: none;
+			text-indent: -9999px;
+			border-bottom: 1px solid $siteColor;
+			overflow: hidden;
+		}
+		.previouspostslink{
+			border-left: 1px solid $siteColor;
+			transform: translateY(0.1em) rotate(45deg);
+		}
+		.nextpostslink{
+			border-right: 1px solid $siteColor;
+			transform: translateY(0.1em) rotate(-45deg);
+		}
 		@include mq{
 		}
 	}
