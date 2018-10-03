@@ -138,6 +138,15 @@
 				align-items: center;
 				padding: 5px 0;
 				font-size: 14px;
+				.home &{
+					display: block;
+					width: 48%;
+					padding: 10px 0;
+					font-size: 18px;
+					@include mq{
+						width: auto;
+					}
+				}
 				@include mq{
 					display: block;
 					padding: 10px 0;
@@ -163,6 +172,14 @@
 						top: 0;
 						bottom: 0;
 						right: -1em;
+					}
+					.home &{
+						justify-content: center;
+						margin-bottom: 10px;
+						margin-right: 0;
+						&:after{
+							content: normal;
+						}
 					}
 					i{
 						margin-right: 5px;
@@ -220,6 +237,9 @@
 								}
 							}
 						}
+					}
+					.home &{
+						text-align: center;
 					}
 				}
 			}
