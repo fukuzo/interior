@@ -18,6 +18,8 @@ $("img.ovr").mouseover(function(){
 });
 
 var winW = $(window).width();
+var winH = $(window).height();
+var scrlNum = 0;
 
 //SPのnav
 $(".spNavBtn").click(function(){
@@ -34,6 +36,21 @@ $(".spNavBtn").click(function(){
 	return false;
 });
 
+
+//SPのfixBtn
+var inqPos;
+$(window).scroll(function(){
+  scrlNum = $(window).scrollTop();
+  if(winW <= 767){
+    winH = $(window).height();
+    inqPos = $(".l-footer .inqs").position().top;
+    if((scrlNum + winH) >= inqPos){
+      $(".l-spFixBtns").fadeOut();
+    }else{
+      $(".l-spFixBtns").fadeIn();
+    }
+  }
+});
 
 /*----- 詳細2のthumb -----*/
 $(".u-thumTxtList2 .clkImgs a").click(function(){

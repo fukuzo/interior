@@ -429,3 +429,28 @@
 		}
 	}
 }
+.l-spFixBtns{
+  display: none;
+  @include mq{
+    display: block;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    .in{
+      display: flex;
+      a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 50px;
+        &.tel{
+          i{
+            transform: scale(-1,1);
+          }
+        }
+      }
+    }
+  }
+}

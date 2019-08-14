@@ -1226,6 +1226,26 @@ blockquote:before {
       .l-toTop:before {
         border-width: 4px 4px 0 0; } }
 
+.l-spFixBtns {
+  display: none; }
+  @media screen and (max-width: 767px) {
+    .l-spFixBtns {
+      display: block;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0; }
+      .l-spFixBtns .in {
+        display: flex; }
+        .l-spFixBtns .in a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+          height: 50px; }
+          .l-spFixBtns .in a.tel i {
+            transform: scale(-1, 1); } }
+
 .u- {
   /* タイトル */
   /* リンク */
@@ -1283,6 +1303,9 @@ blockquote:before {
       border-radius: 5px; }
     .u-btn.clr1 {
       background-color: #ff8c01;
+      color: #fff; }
+    .u-btn.clr2 {
+      background-color: #38a39d;
       color: #fff; }
     .u-btn.withArwR1 {
       text-align: center;

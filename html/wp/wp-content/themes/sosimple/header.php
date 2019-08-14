@@ -45,7 +45,7 @@
 						</dl>
 					</div>
 					<div class="mail">
-						<a class="u-btn withIcn type1 clr1" href="#"><i class="fas fa-envelope"></i><span class="txt">お問い合わせ</span></a>
+						<a class="u-btn withIcn type1 clr1" href="mailto:mail@re-shop02.com"><i class="fas fa-envelope"></i><span class="txt">お問い合わせ</span></a>
 					</div>
 				</div>
 
