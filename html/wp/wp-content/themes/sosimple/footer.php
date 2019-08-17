@@ -15,8 +15,17 @@
 
 	<div class="l-spFixBtns">
     <div class="in">
-      <a class="u-btn withIcn clr2 tel" href="tel:025-241-3421"><i class="fas fa-phone"></i><span class="txt">025-241-3421</span></a>
-      <a class="u-btn withIcn clr1 mail" href="mailto:mail@re-shop02.com"><i class="fas fa-envelope"></i><span class="txt">お問い合わせ</span></a>
+      <a class="u-btn withIcn clr2 tel" href="tel:025-241-3421">
+        <div class="btnIn">
+          <small>電話で問い合わせ</small>
+          <strong><i class="fas fa-phone"></i><span>025-241-3421</span></strong>
+        </div>
+      </a>
+      <a class="u-btn withIcn clr1 mail" href="mailto:mail@re-shop02.com">
+        <div class="btnIn">
+          <strong><i class="fas fa-envelope"></i><span>お問い合わせ</span></strong>
+        </div>
+      </a>
     </div>
 	</div>
 
